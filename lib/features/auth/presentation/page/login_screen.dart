@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 16),
               TextButton(
                 onPressed: () {
-                  context.go('/signin');
+                  context.go('/register-method');
                 },
                 child: const Text('¿No tenés cuenta? Registrate'),
               ),
