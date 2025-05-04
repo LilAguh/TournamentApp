@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class AuthWelcome extends StatelessWidget {
+  const AuthWelcome({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        title: const Text('auth welcome'),
         backgroundColor: Colors.blue[400],
       ),
 
@@ -19,25 +19,18 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const TextField(decoration: InputDecoration(labelText: 'Email')),
-              const SizedBox(height: 16),
-              const TextField(
-                obscureText: true,
-                decoration: InputDecoration(labelText: 'Contraseña'),
-              ),
-              const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  // lógica de login futura
+                  context.go('/login');
                 },
-                child: const Text('Ingresar'),
+                child: const Text('Iniciar sesion'),
               ),
               const SizedBox(height: 16),
-              TextButton(
+              ElevatedButton(
                 onPressed: () {
                   context.go('/register-method');
                 },
-                child: const Text('¿No tenés cuenta? Registrate'),
+                child: const Text('Crear nuevo usuario'),
               ),
             ],
           ),
