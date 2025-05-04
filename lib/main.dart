@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_card_swiper/flutter_card_swiper.dart';
-import 'features/auth/presentation/page/login_screen.dart';
+import 'core/app_route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginScreen(),
+    return MaterialApp.router(
+      title: 'Tournament APP',
+      routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
+      // theme: ThemeData.dark(), //aca va el tema de la aplicacion
     );
   }
 }
