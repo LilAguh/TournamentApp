@@ -23,7 +23,7 @@ class NewUserWelcome extends StatelessWidget {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  context.go('');
+                  context.goNamed('home');
                 },
                 child: const Text('Continuar'),
               ),
