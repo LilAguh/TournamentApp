@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  // lógica de login futura
+                  context.goNamed('home');
                 },
                 child: const Text('Ingresar'),
               ),
