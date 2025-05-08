@@ -5,6 +5,7 @@ class User {
   final String LastName;
   final String Alias;
   final String Email;
+  final String HashedPassword;
   final String CountryCode;
   final String AvatarUrl;
   final DateTime CreatedAt;
@@ -19,6 +20,7 @@ class User {
     required this.LastName,
     required this.Alias,
     required this.Email,
+    required this.HashedPassword,
     required this.CountryCode,
     required this.AvatarUrl,
     required this.CreatedAt,
