@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tournament_app/core/get_it_config.dart';
 import 'core/app_route.dart';
 
 void main() {
+  configureGetItApp();
   runApp(const MyApp());
 }
 
