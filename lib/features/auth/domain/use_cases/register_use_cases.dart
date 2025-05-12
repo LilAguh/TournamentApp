@@ -8,23 +8,23 @@ class RegisterUseCase {
 
   RegisterUseCase({required this.repository});
 
-  Future<Either<Failure, User>> call(
-    String firstName,
-    String lastName,
-    String alias,
-    String email,
-    String password,
-    String countryCode,
-    String avatarUrl,
-  ) {
-    return repository.register(
-      firstName,
-      lastName,
-      alias,
-      email,
-      password,
-      countryCode,
-      avatarUrl,
+  Future<Either<Failure, User>> call({
+    required String firstName,
+    required String lastName,
+    required String alias,
+    required String email,
+    required String password,
+    required String countryCode,
+    required String avatarUrl,
+  }) async {
+    return await repository.register(
+      firstName: firstName,
+      lastName: lastName,
+      alias: alias,
+      email: email,
+      password: password,
+      countryCode: countryCode,
+      avatarUrl: avatarUrl,
     );
   }
 }

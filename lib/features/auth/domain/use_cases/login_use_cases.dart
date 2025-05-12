@@ -8,7 +8,10 @@ class LoginUseCase {
 
   LoginUseCase({required this.repository});
 
-  Future<Either<Failure, User>> call(String alias, String password) {
-    return repository.login(alias, password);
+  Future<Either<Failure, User>> call({
+    required String alias,
+    required String password,
+  }) async {
+    return await repository.login(alias: alias, password: password);
   }
 }
