@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tournament_app/features/auth/domain/use_cases/login_use_cases.dart';
-import 'package:tournament_app/core/error/failure.dart';
+import 'package:tournament_app/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:tournament_app/features/auth/presentation/bloc/auth_event.dart';
+import 'package:tournament_app/features/auth/presentation/bloc/auth_state.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -14,13 +15,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _aliasController = TextEditingController();
   final _passwordController = TextEditingController();
-  late LoginUseCase loginUseCase;
-
-  @override
-  void initState() {
-    super.initState();
-    loginUseCase = GetIt.instance.get<LoginUseCase>();
-  }
 
   @override
   void dispose() {
@@ -29,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  Future<void> _handleLogin() async {
+  void _submitLogin() {
     final alias = _aliasController.text.trim();
     final password = _passwordController.text.trim();
 
@@ -40,62 +34,64 @@ class _LoginScreenState extends State<LoginScreen> {
       return;
     }
 
-    final result = await loginUseCase.call(alias: alias, password: password);
-
-    result.fold(
-      (Failure failure) {
-        print('❌ Error al iniciar sesión: ${failure.message}');
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(failure.message ?? 'Error al iniciar sesión')),
-        );
-      },
-      (user) {
-        print('✅ Login exitoso:');
-        print('ID: ${user.id}');
-        print('Alias: ${user.alias}');
-        print('Email: ${user.email}');
-        print('Rol: ${user.role}');
-        context.goNamed('home');
-      },
+    context.read<AuthBloc>().add(
+      LoginRequested(alias: alias, password: password),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-        backgroundColor: Colors.blue[400],
-      ),
-      body: Center(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(30),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                controller: _aliasController,
-                decoration: const InputDecoration(labelText: 'Alias'),
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                controller: _passwordController,
-                obscureText: true,
-                decoration: const InputDecoration(labelText: 'Contraseña'),
-              ),
-              const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: _handleLogin,
-                child: const Text('Ingresar'),
-              ),
-              const SizedBox(height: 16),
-              TextButton(
-                onPressed: () {
-                  context.go('/register-method');
-                },
-                child: const Text('¿No tenés cuenta? Registrate'),
-              ),
-            ],
+    return BlocListener<AuthBloc, AuthState>(
+      listener: (context, state) {
+        if (state is AuthSuccess) {
+          print('✅ Login exitoso:');
+          print('ID: ${state.user.id}');
+          print('Alias: ${state.user.alias}');
+          print('Email: ${state.user.email}');
+          print('Rol: ${state.user.role}');
+          context.goNamed('home');
+        } else if (state is AuthFailure) {
+          print('❌ Error al iniciar sesión: ${state.message}');
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text(state.message)));
+        }
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Login'),
+          backgroundColor: Colors.blue[400],
+        ),
+        body: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(30),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextField(
+                  controller: _aliasController,
+                  decoration: const InputDecoration(labelText: 'Alias'),
+                ),
+                const SizedBox(height: 16),
+                TextField(
+                  controller: _passwordController,
+                  obscureText: true,
+                  decoration: const InputDecoration(labelText: 'Contraseña'),
+                ),
+                const SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: _submitLogin,
+                  child: const Text('Ingresar'),
+                ),
+                const SizedBox(height: 16),
+                TextButton(
+                  onPressed: () {
+                    context.go('/register-method');
+                  },
+                  child: const Text('¿No tenés cuenta? Registrate'),
+                ),
+              ],
+            ),
           ),
         ),
       ),
