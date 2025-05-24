@@ -1,3 +1,4 @@
+import 'package:tournament_app/common/layout/app_loading_screen.dart';
 import 'package:tournament_app/features/deck/presentation/page/deck_screen.dart';
 import 'package:tournament_app/features/home/presentation/page/home_screen.dart';
 import 'package:tournament_app/features/match/presentation/page/match_screen.dart';
@@ -15,9 +16,14 @@ import 'package:tournament_app/features/auth/presentation/page/register_method_s
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/auth-welcome',
+  initialLocation: '/',
 
   routes: [
+    GoRoute(
+      name: 'loading',
+      path: '/',
+      builder: (context, state) => AppLoadingScreen(),
+    ),
     GoRoute(
       name: 'auth welcome',
       path: '/auth-welcome',

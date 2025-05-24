@@ -13,7 +13,7 @@ class Profile extends StatelessWidget {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
         if (state is AuthInitial) {
-          print('🧼 estado: sesión eliminada');
+          print('sesión eliminada');
         }
       },
       child: Scaffold(
