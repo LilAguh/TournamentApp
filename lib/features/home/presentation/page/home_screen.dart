@@ -9,20 +9,20 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final alias = context.select<AuthBloc, String?>((bloc) {
-      final state = bloc.state;
-      if (state is AuthSuccess) {
-        return state.user.alias;
-      }
-      return null;
-    });
+    // final alias = context.select<AuthBloc, String?>((bloc) {
+    //   final state = bloc.state;
+    //   if (state is AuthSuccess) {
+    //     return state.user.alias;
+    //   }
+    //   return null;
+    // });
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('HOME'),
         backgroundColor: Colors.green[400],
       ),
-      body: Center(child: Text('¡Bienvenido, ${alias ?? "invitado"}!')),
+      // body: Center(child: Text('¡Bienvenido, ${alias ?? "invitado"}!')),
     );
   }
 }

@@ -12,9 +12,9 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
-        if (state is AuthInitial) {
-          print('🧼 estado: sesión eliminada');
-        }
+        // if (state is AuthInitial) {
+        //   print('🧼 estado: sesión eliminada');
+        // }
       },
       child: Scaffold(
         appBar: AppBar(
@@ -29,7 +29,7 @@ class Profile extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    context.read<AuthBloc>().add(LogoutRequested());
+                    // context.read<AuthBloc>().add(LogoutRequested());
                     context.go('/auth-welcome');
                   },
                   style: ElevatedButton.styleFrom(

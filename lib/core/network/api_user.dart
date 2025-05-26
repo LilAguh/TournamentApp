@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 final Dio dioUser = Dio(
   BaseOptions(
-    baseUrl: 'https://7134-181-97-134-247.ngrok-free.app/',
+    baseUrl: 'http://192.168.0.142:5181/',
     contentType: 'application/json',
     headers: <String, String>{'Accept': 'application/json'},
   ),
