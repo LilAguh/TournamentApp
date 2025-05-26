@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tournament_app/features/auth/domain/use_cases/login_use_cases.dart';
-import 'package:tournament_app/core/error/failure.dart';
+import '../bloc/auth_bloc.dart';
+import '../bloc/auth_event.dart';
+import '../bloc/auth_state.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -14,13 +15,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _aliasController = TextEditingController();
   final _passwordController = TextEditingController();
-  late LoginUseCase loginUseCase;
-
-  @override
-  void initState() {
-    super.initState();
-    loginUseCase = GetIt.instance.get<LoginUseCase>();
-  }
 
   @override
   void dispose() {
@@ -29,71 +23,114 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  Future<void> _handleLogin() async {
-    final alias = _aliasController.text.trim();
-    final password = _passwordController.text.trim();
-
-    if (alias.isEmpty || password.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Alias y contraseña son obligatorios')),
-      );
-      return;
-    }
-
-    final result = await loginUseCase.call(alias: alias, password: password);
-
-    result.fold(
-      (Failure failure) {
-        print('❌ Error al iniciar sesión: ${failure.message}');
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(failure.message ?? 'Error al iniciar sesión')),
-        );
-      },
-      (user) {
-        print('✅ Login exitoso:');
-        print('ID: ${user.id}');
-        print('Alias: ${user.alias}');
-        print('Email: ${user.email}');
-        print('Rol: ${user.role}');
-        context.goNamed('home');
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        title: const Text('Login simple'),
         backgroundColor: Colors.blue[400],
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(30),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: BlocListener<AuthBloc, AuthState>(
+          listener: (context, state) {
+            if (state.isSucess) {
+              // Este es el caso de login exitoso
+              _aliasController.clear();
+              _passwordController.clear();
+              Future.microtask(() {
+                context.goNamed('home');
+              });
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Login Exitoso'),
+                  backgroundColor: Colors.green,
+                ),
+              );
+
+              // ignore: invalid_use_of_visible_for_testing_member
+              context.read<AuthBloc>().emit(state.copyWith(isSucess: false));
+            }
+
+            if (state.errorMessage != null) {
+              _passwordController.clear();
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(state.errorMessage!)));
+            }
+          },
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextField(
-                controller: _aliasController,
-                decoration: const InputDecoration(labelText: 'Alias'),
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                controller: _passwordController,
-                obscureText: true,
-                decoration: const InputDecoration(labelText: 'Contraseña'),
-              ),
-              const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: _handleLogin,
-                child: const Text('Ingresar'),
-              ),
-              const SizedBox(height: 16),
-              TextButton(
-                onPressed: () {
-                  context.go('/register-method');
+              BlocBuilder<AuthBloc, AuthState>(
+                builder: (context, state) {
+                  return TextField(
+                    controller: _aliasController,
+                    onChanged:
+                        (value) => context.read<AuthBloc>().add(
+                          AuthAliasChanged(value),
+                        ),
+                    decoration: InputDecoration(
+                      labelText: 'Alias',
+                      border: const OutlineInputBorder(),
+                      errorText:
+                          state.alias.isEmpty && state.errorMessage != null
+                              ? 'Alias obligatorio'
+                              : null,
+                    ),
+                  );
                 },
-                child: const Text('¿No tenés cuenta? Registrate'),
+              ),
+
+              const SizedBox(height: 20),
+
+              BlocBuilder<AuthBloc, AuthState>(
+                builder: (context, state) {
+                  return TextField(
+                    controller: _passwordController,
+                    onChanged:
+                        (value) => context.read<AuthBloc>().add(
+                          AuthPasswordChanged(value),
+                        ),
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                      border: const OutlineInputBorder(),
+                      errorText:
+                          state.password.isEmpty && state.errorMessage != null
+                              ? 'Password obligatorio'
+                              : null,
+                    ),
+                    obscureText: true,
+                  );
+                },
+              ),
+              const SizedBox(height: 40),
+              BlocBuilder<AuthBloc, AuthState>(
+                builder: (context, state) {
+                  if (state.isLoading) {
+                    return const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 16),
+                      child: CircularProgressIndicator(),
+                    );
+                  }
+
+                  // if (state.errorMessage != null) {
+                  //   return Padding(
+                  //     padding: const EdgeInsets.symmetric(vertical: 16),
+                  //     child: Text(
+                  //       state.errorMessage!,
+                  //       style: const TextStyle(color: Colors.red),
+                  //     ),
+                  //   );
+                  // }
+                  return const SizedBox.shrink();
+                },
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  context.read<AuthBloc>().add(AuthSubmitted());
+                },
+                child: Text('Iniciar Sesion'),
               ),
             ],
           ),
