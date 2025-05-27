@@ -10,10 +10,10 @@ final Dio dioUser = Dio(
 
 enum HttpMethod { get, post, put, patch, delete }
 
-class ApiUser {
+class ApiDio {
   final Dio dioUser;
 
-  ApiUser({required this.dioUser});
+  ApiDio({required this.dioUser});
 
   Future<Response> request({
     required HttpMethod method,
