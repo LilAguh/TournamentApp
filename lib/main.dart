@@ -4,6 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:tournament_app/core/get_it_config.dart';
 import 'package:tournament_app/features/auth/config/auth_config.dart';
 import 'package:tournament_app/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:tournament_app/features/country/presentation/bloc/country_bloc.dart';
 import 'core/app_route.dart';
 
 void main() async {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       providers: [
         // BlocProvider<AuthBloc>(create: (_) => GetIt.instance<AuthBloc>()),
         BlocProvider(create: (_) => sl<AuthBloc>()),
+        BlocProvider(create: (_) => sl<CountryBloc>()),
       ],
       child: MaterialApp.router(
         title: 'Tournament APP',
