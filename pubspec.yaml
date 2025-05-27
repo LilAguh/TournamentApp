@@ -42,6 +42,9 @@ dependencies:
   get_it: ^8.0.3
   flutter_bloc: ^9.1.1
   shared_preferences: ^2.5.3
+  ip_country_lookup: ^1.0.3
+  geolocator: ^14.0.1
+  geocoding: ^2.1.0
 
 dev_dependencies:
   flutter_test:
