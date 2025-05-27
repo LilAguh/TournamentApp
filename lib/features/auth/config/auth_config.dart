@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tournament_app/core/network/api_user.dart';
+import 'package:tournament_app/core/network/api_dio.dart';
 import 'package:tournament_app/features/auth/data/datasources/auth_local_data_source.dart';
 import 'package:tournament_app/features/auth/data/datasources/auth_local_data_source_impl.dart';
 
@@ -16,12 +16,12 @@ final sl = GetIt.instance;
 Future<void> initAuthConfig() async {
   // Cliente HTTP centralizado
   sl.registerLazySingleton(
-    () => ApiUser(dioUser: dioUser),
+    () => ApiDio(dioUser: dioUser),
   ); // ya tenés Dio creado
 
   // Remote data source
   sl.registerLazySingleton<AuthRemoteDataSource>(
-    () => AuthRemoteDataSourceImpl(apiUser: sl()),
+    () => AuthRemoteDataSourceImpl(apiDio: sl()),
   );
 
   // Repository

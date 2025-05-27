@@ -1,17 +1,17 @@
 import 'package:tournament_app/core/error/failure.dart';
-import 'package:tournament_app/core/network/api_user.dart';
+import 'package:tournament_app/core/network/api_dio.dart';
 import 'package:tournament_app/features/auth/data/models/login_response.dart';
 import 'package:tournament_app/features/auth/domain/entities/user.dart';
 import 'package:tournament_app/features/auth/data/datasources/auth_remote_data_source.dart';
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
-  final ApiUser apiUser;
+  final ApiDio apiDio;
 
-  AuthRemoteDataSourceImpl({required this.apiUser});
+  AuthRemoteDataSourceImpl({required this.apiDio});
 
   @override
   Future<LoginResponse> login(String alias, String password) async {
-    final response = await apiUser.request(
+    final response = await apiDio.request(
       method: HttpMethod.post,
       url: 'Auth/Login',
       body: {'alias': alias, 'password': password},
