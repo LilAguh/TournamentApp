@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tournament_app/core/network/api_user.dart';
+import 'package:tournament_app/core/network/api_dio.dart';
 import 'package:tournament_app/features/auth/data/datasources/auth_local_data_source.dart';
 import 'package:tournament_app/features/auth/data/datasources/auth_local_data_source_impl.dart';
 
@@ -9,19 +9,21 @@ import 'package:tournament_app/features/auth/data/datasources/auth_remote_data_s
 import 'package:tournament_app/features/auth/data/repositories/users_repository_impl.dart';
 import 'package:tournament_app/features/auth/domain/repository/users_repository.dart';
 import 'package:tournament_app/features/auth/domain/use_cases/login_use_cases.dart';
+import 'package:tournament_app/features/auth/domain/use_cases/register_use_cases.dart';
 import 'package:tournament_app/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:tournament_app/features/auth/presentation/register/bloc/register_bloc.dart';
 
 final sl = GetIt.instance;
 
 Future<void> initAuthConfig() async {
   // Cliente HTTP centralizado
   sl.registerLazySingleton(
-    () => ApiUser(dioUser: dioUser),
+    () => ApiDio(dioUser: dioUser),
   ); // ya tenés Dio creado
 
   // Remote data source
   sl.registerLazySingleton<AuthRemoteDataSource>(
-    () => AuthRemoteDataSourceImpl(apiUser: sl()),
+    () => AuthRemoteDataSourceImpl(apiDio: sl()),
   );
 
   // Repository
@@ -31,9 +33,11 @@ Future<void> initAuthConfig() async {
 
   // Use Case
   sl.registerLazySingleton(() => LoginUseCase(repository: sl()));
+  sl.registerLazySingleton(() => RegisterUseCase(repository: sl()));
 
   // bloc
   sl.registerFactory(() => AuthBloc(loginUseCase: sl()));
+  sl.registerFactory(() => RegisterBloc(registerUseCase: sl()));
 
   // SharedPreferences
   final prefs = await SharedPreferences.getInstance();

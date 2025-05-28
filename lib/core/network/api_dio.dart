@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 final Dio dioUser = Dio(
   BaseOptions(
-    baseUrl: 'http://192.168.0.142:5181/',
+    baseUrl: 'http://192.168.0.243:5181/',
     contentType: 'application/json',
     headers: <String, String>{'Accept': 'application/json'},
   ),
@@ -10,10 +10,10 @@ final Dio dioUser = Dio(
 
 enum HttpMethod { get, post, put, patch, delete }
 
-class ApiUser {
+class ApiDio {
   final Dio dioUser;
 
-  ApiUser({required this.dioUser});
+  ApiDio({required this.dioUser});
 
   Future<Response> request({
     required HttpMethod method,
