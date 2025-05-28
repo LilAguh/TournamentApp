@@ -23,6 +23,9 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       final userJson = response.data['user'];
       final user = User.fromJson(userJson);
 
+      print(token);
+      print(user.role);
+
       return LoginResponse(token: token, user: user);
     } else {
       final data = response.data;
