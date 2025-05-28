@@ -63,16 +63,21 @@ class _AuthWelcome extends State<AuthWelcome> {
                         onPressed: () async {
                           setState(() => isLoading = true);
 
-                          final locationService = UserLocationService();
-                          final data = await locationService.getCountryData();
+                          final country =
+                              await UserLocationService()
+                                  .getBestAvailableCountry();
 
-                          if (data != null) {
-                            countryCode = data.$1;
-                            countryName = data.$2;
-                            // Podés despachar eventos aquí si querés
-                            context.read<CountryBloc>().add(
-                              GetCountryRequested(),
-                            );
+                          if (country != null) {
+                            countryCode = country.$1;
+                            countryName = country.$2;
+
+                            print('Código: $countryCode');
+                            print('Nombre: $countryName');
+
+                            // Despachás tu evento si hace falta
+                            // context.read<CountryBloc>().add(
+                            //   GetCountryRequested(),
+                            // );
                           }
 
                           setState(() {
