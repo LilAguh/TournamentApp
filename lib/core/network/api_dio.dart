@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 final Dio dioUser = Dio(
   BaseOptions(
-    baseUrl: 'http://192.168.0.142:5181/',
+    baseUrl: 'http://192.168.0.243:5181/',
     contentType: 'application/json',
     headers: <String, String>{'Accept': 'application/json'},
   ),
