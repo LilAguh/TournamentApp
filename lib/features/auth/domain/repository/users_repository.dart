@@ -14,6 +14,5 @@ abstract class UsersRepository {
     required String email,
     required String password,
     required String countryCode,
-    required String avatarUrl,
   });
 }

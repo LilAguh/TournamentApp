@@ -39,4 +39,34 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       throw ServerFailure(message: message);
     }
   }
+
+  @override
+  Future<User> register({
+    required String firstName,
+    required String lastName,
+    required String alias,
+    required String email,
+    required String password,
+    required String countryCode,
+  }) async {
+    final response = await apiDio.request(
+      method: HttpMethod.post,
+      url: 'Auth/Register',
+      body: {
+        'firstName': firstName,
+        'lastName': lastName,
+        'alias': alias,
+        'email': email,
+        'password': password,
+        'countryCode': countryCode,
+      },
+    );
+
+    if (response.statusCode == 200) {
+      return User.fromJson(response.data['user']);
+    } else {
+      final message = response.data['Message'] ?? 'Error al registrar usuario';
+      throw ServerFailure(message: message);
+    }
+  }
 }

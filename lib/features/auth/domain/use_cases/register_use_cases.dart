@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tournament_app/core/error/failure.dart';
 import 'package:tournament_app/features/auth/domain/repository/users_repository.dart';
 import 'package:tournament_app/features/auth/domain/entities/user.dart';
@@ -15,8 +16,10 @@ class RegisterUseCase {
     required String email,
     required String password,
     required String countryCode,
-    required String avatarUrl,
   }) async {
+    final prefs = await SharedPreferences.getInstance();
+    final countryCode = prefs.getString('user_country_code') ?? 'MG';
+
     return await repository.register(
       firstName: firstName,
       lastName: lastName,
@@ -24,7 +27,6 @@ class RegisterUseCase {
       email: email,
       password: password,
       countryCode: countryCode,
-      avatarUrl: avatarUrl,
     );
   }
 }

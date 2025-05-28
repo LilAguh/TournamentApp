@@ -30,4 +30,20 @@ class RegisterPasswordRepeatChanged extends RegisterEvent {
   RegisterPasswordRepeatChanged(this.passwordRepeat);
 }
 
-class RegisterSubmitted extends RegisterEvent {}
+class RegisterSubmitted extends RegisterEvent {
+  final String firstName;
+  final String lastName;
+  final String alias;
+  final String email;
+  final String password;
+  final String repeatPassword;
+
+  RegisterSubmitted({
+    required this.firstName,
+    required this.lastName,
+    required this.alias,
+    required this.email,
+    required this.password,
+    required this.repeatPassword,
+  });
+}

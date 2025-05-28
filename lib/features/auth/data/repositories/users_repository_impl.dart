@@ -44,8 +44,19 @@ class UsersRepositoryImpl implements UsersRepository {
     required String email,
     required String password,
     required String countryCode,
-    required String avatarUrl,
-  }) {
-    throw UnimplementedError('register() no implementado todavía');
+  }) async {
+    try {
+      final user = await remoteDataSource.register(
+        firstName: firstName,
+        lastName: lastName,
+        alias: alias,
+        email: email,
+        password: password,
+        countryCode: countryCode,
+      );
+      return Right(user);
+    } catch (e) {
+      return Left(ServerFailure(message: e.toString()));
+    }
   }
 }

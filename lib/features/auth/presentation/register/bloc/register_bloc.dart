@@ -3,7 +3,8 @@ import 'register_event.dart';
 import 'register_state.dart';
 
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
-  RegisterBloc() : super(RegisterState.initial()) {
+  RegisterBloc({required Object registerUseCase})
+    : super(RegisterState.initial()) {
     on<RegisterFirstNameChanged>(
       (event, emit) => emit(state.copyWith(firstName: event.firstName)),
     );
