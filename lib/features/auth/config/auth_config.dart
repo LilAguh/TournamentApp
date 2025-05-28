@@ -9,7 +9,9 @@ import 'package:tournament_app/features/auth/data/datasources/auth_remote_data_s
 import 'package:tournament_app/features/auth/data/repositories/users_repository_impl.dart';
 import 'package:tournament_app/features/auth/domain/repository/users_repository.dart';
 import 'package:tournament_app/features/auth/domain/use_cases/login_use_cases.dart';
+import 'package:tournament_app/features/auth/domain/use_cases/register_use_cases.dart';
 import 'package:tournament_app/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:tournament_app/features/auth/presentation/register/bloc/register_bloc.dart';
 
 final sl = GetIt.instance;
 
@@ -31,9 +33,11 @@ Future<void> initAuthConfig() async {
 
   // Use Case
   sl.registerLazySingleton(() => LoginUseCase(repository: sl()));
+  sl.registerLazySingleton(() => RegisterUseCase(repository: sl()));
 
   // bloc
   sl.registerFactory(() => AuthBloc(loginUseCase: sl()));
+  sl.registerFactory(() => RegisterBloc(registerUseCase: sl()));
 
   // SharedPreferences
   final prefs = await SharedPreferences.getInstance();
