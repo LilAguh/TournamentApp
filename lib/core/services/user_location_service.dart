@@ -2,6 +2,7 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:ip_country_lookup/ip_country_lookup.dart';
 import 'package:ip_country_lookup/models/ip_country_data_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class UserLocationService {
   /// Devuelve (code, name) → ej: ("AR", "Argentina")
@@ -63,5 +64,11 @@ class UserLocationService {
     }
 
     return null;
+  }
+
+  Future<void> saveCountryAndCodeToPrefs(String code, String name) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('user_country_code', code);
+    await prefs.setString('user_country_name', name);
   }
 }
