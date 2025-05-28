@@ -41,7 +41,7 @@ final appRouter = GoRouter(
     GoRoute(
       name: 'register email',
       path: '/register-email',
-      builder: (context, state) => const RegisterEmail(),
+      builder: (context, state) => const RegisterEmailScreen(),
     ),
     GoRoute(
       name: 'activate account',
