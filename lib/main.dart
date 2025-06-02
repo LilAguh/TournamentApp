@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         routerConfig: appRouter,
         debugShowCheckedModeBanner: false,
         // theme: ThemeData.dark(), //aca va el tema de la aplicacion
+        theme: ThemeData(fontFamily: 'Minion'),
       ),
     );
   }
