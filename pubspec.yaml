@@ -45,6 +45,8 @@ dependencies:
   geolocator: ^10.1.0
   geocoding: ^2.1.0
   ip_country_lookup: ^1.0.3
+  flutter_svg: ^2.0.7
+
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,32 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/Cinzel-Regular.ttf
+        - asset: assets/fonts/Cinzel-Bold.ttf
+          weight: 700
+
+    - family: Classicloud
+      fonts:
+        - asset: assets/fonts/Classicloud.ttf
+
+    - family: Leaders
+      fonts:
+        - asset: assets/fonts/Leaders.ttf
+
+    - family: Minion
+      fonts:
+        - asset: assets/fonts/MinionPro.otf
+
+  assets:
+    - assets/borders/frame.svg
+    - assets/borders/frame-app.svg
+    - assets/borders/ornamental-frame.svg
+    - assets/borders/ornamental-frame-2.svg
+    - assets/images/noise.png
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

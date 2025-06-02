@@ -1,9 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tournament_app/features/auth/domain/use_cases/register_use_cases.dart';
 import 'register_event.dart';
 import 'register_state.dart';
 
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
-  RegisterBloc() : super(RegisterState.initial()) {
+  final RegisterUseCase registerUseCase;
+
+  RegisterBloc({required this.registerUseCase})
+    : super(RegisterState.initial()) {
     on<RegisterFirstNameChanged>(
       (event, emit) => emit(state.copyWith(firstName: event.firstName)),
     );
@@ -29,24 +34,38 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           emit(state.copyWith(passwordRepeat: event.passwordRepeat)),
     );
 
-    on<RegisterSubmitted>(_onRegisterSubmitted);
-  }
+    on<RegisterSubmitted>((event, emit) async {
+      print('[RegisterBloc] Enviando datos al usecase...');
 
-  Future<void> _onRegisterSubmitted(
-    RegisterSubmitted event,
-    Emitter<RegisterState> emit,
-  ) async {
-    if (state.password != state.passwordRepeat) {
-      emit(state.copyWith(errorMessage: 'Las contraseñas no coinciden'));
-      return;
-    }
+      if (state.password != state.passwordRepeat) {
+        emit(state.copyWith(errorMessage: 'Las contraseñas no coinciden'));
+        return;
+      }
 
-    emit(state.copyWith(isLoading: true, errorMessage: null));
+      emit(state.copyWith(isLoading: true, errorMessage: null));
 
-    // TODO: Agregar llamada al use case / repositorio
-    await Future.delayed(const Duration(seconds: 2));
+      final prefs = await SharedPreferences.getInstance();
+      final country = prefs.getString('user_country_code') ?? 'BR';
 
-    // Simulación de éxito
-    emit(state.copyWith(isLoading: false, isSuccess: true));
+      final result = await registerUseCase.call(
+        firstName: state.firstName,
+        lastName: state.lastName,
+        alias: state.alias,
+        email: state.email,
+        password: state.password,
+        countryCode: country,
+      );
+
+      result.fold(
+        (failure) {
+          print('[RegisterBloc] Error: ${failure.message}');
+          emit(state.copyWith(isLoading: false, errorMessage: failure.message));
+        },
+        (user) {
+          print('[RegisterBloc] Usuario registrado con éxito');
+          emit(state.copyWith(isLoading: false, isSuccess: true));
+        },
+      );
+    });
   }
 }
