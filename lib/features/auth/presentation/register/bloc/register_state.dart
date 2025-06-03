@@ -8,6 +8,13 @@ class RegisterState {
   final bool isLoading;
   final bool isSuccess;
   final String? errorMessage;
+  final String? firstNameError;
+  final String? lastNameError;
+  final String? aliasError;
+  final String? emailError;
+  final String? passwordError;
+  final String? passwordRepeatError;
+  final Set<String> validatedFields;
 
   const RegisterState({
     required this.firstName,
@@ -19,6 +26,13 @@ class RegisterState {
     this.isLoading = false,
     this.isSuccess = false,
     this.errorMessage,
+    this.firstNameError,
+    this.lastNameError,
+    this.aliasError,
+    this.emailError,
+    this.passwordError,
+    this.passwordRepeatError,
+    this.validatedFields = const {}, // Inicialmente vacío
   });
 
   factory RegisterState.initial() => const RegisterState(
@@ -40,6 +54,13 @@ class RegisterState {
     bool? isLoading,
     bool? isSuccess,
     String? errorMessage,
+    String? firstNameError,
+    String? lastNameError,
+    String? aliasError,
+    String? emailError,
+    String? passwordError,
+    String? passwordRepeatError,
+    Set<String>? validatedFields,
   }) {
     return RegisterState(
       firstName: firstName ?? this.firstName,
@@ -51,6 +72,13 @@ class RegisterState {
       isLoading: isLoading ?? this.isLoading,
       isSuccess: isSuccess ?? this.isSuccess,
       errorMessage: errorMessage,
+      firstNameError: firstNameError,
+      lastNameError: lastNameError,
+      aliasError: aliasError,
+      emailError: emailError,
+      passwordError: passwordError,
+      passwordRepeatError: passwordRepeatError,
+      validatedFields: validatedFields ?? this.validatedFields,
     );
   }
 }
