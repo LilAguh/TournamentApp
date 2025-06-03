@@ -2,7 +2,7 @@ import 'package:tournament_app/core/error/failure.dart';
 import 'package:tournament_app/core/network/api_dio.dart';
 import 'package:tournament_app/features/auth/data/models/login_response.dart';
 import 'package:tournament_app/features/auth/domain/entities/user.dart';
-import 'package:tournament_app/features/auth/data/datasources/auth_remote_data_source.dart';
+import 'package:tournament_app/features/auth/domain/repository/auth_remote_data_source.dart';
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   final ApiDio apiDio;

@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:tournament_app/core/error/failure.dart';
-import 'package:tournament_app/features/auth/data/datasources/auth_local_data_source.dart';
-import 'package:tournament_app/features/auth/data/datasources/auth_remote_data_source.dart';
+import 'package:tournament_app/features/auth/domain/repository/auth_local_data_source.dart';
+import 'package:tournament_app/features/auth/domain/repository/auth_remote_data_source.dart';
 import 'package:tournament_app/features/auth/domain/entities/user.dart';
 import 'package:tournament_app/features/auth/domain/repository/users_repository.dart';
 

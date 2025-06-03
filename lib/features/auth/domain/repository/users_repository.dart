@@ -2,7 +2,7 @@ import 'package:tournament_app/core/error/failure.dart';
 import 'package:tournament_app/features/auth/domain/entities/user.dart';
 import 'package:dartz/dartz.dart';
 
-abstract class UsersRepository {
+abstract interface class UsersRepository {
   Future<Either<Failure, User>> login({
     required String alias,
     required String password,

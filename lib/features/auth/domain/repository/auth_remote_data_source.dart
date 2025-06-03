@@ -1,7 +1,7 @@
 import 'package:tournament_app/features/auth/data/models/login_response.dart';
 import 'package:tournament_app/features/auth/domain/entities/user.dart';
 
-abstract class AuthRemoteDataSource {
+abstract interface class AuthRemoteDataSource {
   Future<LoginResponse> login(String alias, String password);
   Future<User> register({
     required String firstName,

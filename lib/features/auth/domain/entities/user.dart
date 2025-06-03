@@ -1,4 +1,4 @@
-import 'package:tournament_app/features/auth/domain/enum/user_role.dart';
+enum UserRole { player, admin, judge, organizer }
 
 class User {
   final int id;
@@ -31,6 +31,7 @@ class User {
     );
   }
 
+  //Lo ideal sería que estos métodos estuvieran en el backend
   static UserRole _mapIntToUserRole(int roleId) {
     switch (roleId) {
       case 1:

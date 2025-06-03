@@ -1,6 +1,6 @@
-import 'package:tournament_app/features/auth/domain/enum/user_role.dart';
+import 'package:tournament_app/features/auth/domain/entities/user.dart';
 
-abstract class AuthLocalDataSource {
+abstract interface class AuthLocalDataSource {
   Future<void> saveAuthData({required String token, required UserRole role});
 
   Future<String?> getToken();

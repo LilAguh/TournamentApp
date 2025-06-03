@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tournament_app/features/auth/domain/enum/user_role.dart';
-import 'auth_local_data_source.dart';
+import 'package:tournament_app/features/auth/domain/entities/user.dart';
+import '../../domain/repository/auth_local_data_source.dart';
 
 class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   final SharedPreferences prefs;

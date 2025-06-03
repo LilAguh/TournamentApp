@@ -1,11 +1,11 @@
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tournament_app/core/network/api_dio.dart';
-import 'package:tournament_app/features/auth/data/datasources/auth_local_data_source.dart';
-import 'package:tournament_app/features/auth/data/datasources/auth_local_data_source_impl.dart';
+import 'package:tournament_app/features/auth/domain/repository/auth_local_data_source.dart';
+import 'package:tournament_app/features/auth/data/datasource/auth_local_data_source_impl.dart';
 
-import 'package:tournament_app/features/auth/data/datasources/auth_remote_data_source.dart';
-import 'package:tournament_app/features/auth/data/datasources/auth_remote_data_source_impl.dart';
+import 'package:tournament_app/features/auth/domain/repository/auth_remote_data_source.dart';
+import 'package:tournament_app/features/auth/data/datasource/auth_remote_data_source_impl.dart';
 import 'package:tournament_app/features/auth/data/repositories/users_repository_impl.dart';
 import 'package:tournament_app/features/auth/domain/repository/users_repository.dart';
 import 'package:tournament_app/features/auth/domain/use_cases/login_use_cases.dart';
