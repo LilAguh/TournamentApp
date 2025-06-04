@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:tournament_app/core/error/failure.dart';
 import 'package:tournament_app/features/auth/data/datasources/auth_local_data_source.dart';
 import 'package:tournament_app/features/auth/data/datasources/auth_remote_data_source.dart';
@@ -55,7 +56,17 @@ class UsersRepositoryImpl implements UsersRepository {
       );
       return Right(user);
     } catch (e) {
-      return Left(ServerFailure(message: e.toString()));
+      if (e is Failure) {
+        return Left(e);
+      } else if (e is DioException) {
+        final message =
+            e.response?.data['Message'] ??
+            e.response?.data['message'] ??
+            'Error del servidor';
+        return Left(ServerFailure(message: message));
+      } else {
+        return Left(ServerFailure(message: 'Error inesperado'));
+      }
     }
   }
 }

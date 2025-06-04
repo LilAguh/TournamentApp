@@ -31,3 +31,12 @@ class RegisterPasswordRepeatChanged extends RegisterEvent {
 }
 
 class RegisterSubmitted extends RegisterEvent {}
+
+class ValidateField extends RegisterEvent {
+  final String fieldName;
+  ValidateField(this.fieldName);
+}
+
+class TogglePasswordVisibility extends RegisterEvent {}
+
+class RegisterResetSuccess extends RegisterEvent {}
