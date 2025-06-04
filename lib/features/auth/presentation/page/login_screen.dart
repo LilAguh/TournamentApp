@@ -95,7 +95,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           builder: (context, state) {
                             return GothicTextField(
                               label: 'Alias',
-                              fieldName: 'alias',
                               controller: _aliasController,
                               onChanged:
                                   (value) => context.read<AuthBloc>().add(
@@ -114,7 +113,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           builder: (context, state) {
                             return GothicTextField(
                               label: 'Password',
-                              fieldName: 'password',
                               controller: _passwordController,
                               onChanged:
                                   (value) => context.read<AuthBloc>().add(
