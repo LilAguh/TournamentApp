@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class GothicButton extends StatefulWidget {
   final String text;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final double width;
   final double height;
   final IconData? icon;
@@ -13,7 +13,7 @@ class GothicButton extends StatefulWidget {
     required this.text,
     required this.onPressed,
     this.width = double.infinity,
-    this.height = 75,
+    this.height = 56,
     this.icon,
   });
 
@@ -45,7 +45,7 @@ class _GothicButtonState extends State<GothicButton> {
       onTapDown: _handleTapDown,
       onTapUp: _handleTapUp,
       onTapCancel: _handleTapCancel,
-      onTap: widget.onPressed,
+      onTap: widget.onPressed != null ? widget.onPressed : null,
       child: SizedBox(
         width: widget.width,
         height: widget.height,
@@ -66,8 +66,8 @@ class _GothicButtonState extends State<GothicButton> {
             ),
             // Fondo + contenido del botón
             Container(
-              width: widget.width - 10,
-              height: widget.height - 10,
+              width: widget.width,
+              height: widget.height,
               color: const Color.fromARGB(0, 30, 30, 30),
               alignment: Alignment.center,
               child: Row(
