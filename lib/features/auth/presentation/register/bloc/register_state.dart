@@ -5,16 +5,17 @@ class RegisterState {
   final String email;
   final String password;
   final String passwordRepeat;
+
+  final bool isFirstNameValid;
+  final bool isLastNameValid;
+  final bool isAliasValid;
+  final bool isEmailValid;
+  final bool isPasswordValid;
+  final bool isPasswordRepeatValid;
+
   final bool isLoading;
   final bool isSuccess;
   final String? errorMessage;
-  final String? firstNameError;
-  final String? lastNameError;
-  final String? aliasError;
-  final String? emailError;
-  final String? passwordError;
-  final String? passwordRepeatError;
-  final Set<String> validatedFields;
 
   const RegisterState({
     required this.firstName,
@@ -23,16 +24,15 @@ class RegisterState {
     required this.email,
     required this.password,
     required this.passwordRepeat,
+    required this.isFirstNameValid,
+    required this.isLastNameValid,
+    required this.isAliasValid,
+    required this.isEmailValid,
+    required this.isPasswordValid,
+    required this.isPasswordRepeatValid,
     this.isLoading = false,
     this.isSuccess = false,
     this.errorMessage,
-    this.firstNameError,
-    this.lastNameError,
-    this.aliasError,
-    this.emailError,
-    this.passwordError,
-    this.passwordRepeatError,
-    this.validatedFields = const {}, // Inicialmente vacío
   });
 
   factory RegisterState.initial() => const RegisterState(
@@ -42,6 +42,12 @@ class RegisterState {
     email: '',
     password: '',
     passwordRepeat: '',
+    isFirstNameValid: false,
+    isLastNameValid: false,
+    isAliasValid: false,
+    isEmailValid: false,
+    isPasswordValid: false,
+    isPasswordRepeatValid: false,
   );
 
   RegisterState copyWith({
@@ -51,16 +57,15 @@ class RegisterState {
     String? email,
     String? password,
     String? passwordRepeat,
+    bool? isFirstNameValid,
+    bool? isLastNameValid,
+    bool? isAliasValid,
+    bool? isEmailValid,
+    bool? isPasswordValid,
+    bool? isPasswordRepeatValid,
     bool? isLoading,
     bool? isSuccess,
     String? errorMessage,
-    String? firstNameError,
-    String? lastNameError,
-    String? aliasError,
-    String? emailError,
-    String? passwordError,
-    String? passwordRepeatError,
-    Set<String>? validatedFields,
   }) {
     return RegisterState(
       firstName: firstName ?? this.firstName,
@@ -69,16 +74,16 @@ class RegisterState {
       email: email ?? this.email,
       password: password ?? this.password,
       passwordRepeat: passwordRepeat ?? this.passwordRepeat,
+      isFirstNameValid: isFirstNameValid ?? this.isFirstNameValid,
+      isLastNameValid: isLastNameValid ?? this.isLastNameValid,
+      isAliasValid: isAliasValid ?? this.isAliasValid,
+      isEmailValid: isEmailValid ?? this.isEmailValid,
+      isPasswordValid: isPasswordValid ?? this.isPasswordValid,
+      isPasswordRepeatValid:
+          isPasswordRepeatValid ?? this.isPasswordRepeatValid,
       isLoading: isLoading ?? this.isLoading,
       isSuccess: isSuccess ?? this.isSuccess,
       errorMessage: errorMessage,
-      firstNameError: firstNameError,
-      lastNameError: lastNameError,
-      aliasError: aliasError,
-      emailError: emailError,
-      passwordError: passwordError,
-      passwordRepeatError: passwordRepeatError,
-      validatedFields: validatedFields ?? this.validatedFields,
     );
   }
 }
