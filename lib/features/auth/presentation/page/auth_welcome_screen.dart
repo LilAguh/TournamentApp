@@ -22,11 +22,10 @@ class _AuthWelcome extends State<AuthWelcome> {
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle.light, // Íconos blancos
+      value: SystemUiOverlayStyle.light,
       child: FramedBackground(
         child: Stack(
           children: [
-            // Contenido principal
             Center(
               child:
                   isLoading
@@ -39,30 +38,38 @@ class _AuthWelcome extends State<AuthWelcome> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Color(0xFFD6C8B0),
-                              fontSize: 100,
+                              fontSize: 100, // Reducido de 100
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Classicloud',
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          const SizedBox(height: 8), // Reducido de 10
                           const Text(
                             'Within your paws, the tarot whispers fate.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Color(0xFFD6C8B0),
-                              fontSize: 30,
+                              fontSize: 24, // Reducido de 30
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Minion',
                             ),
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(
+                            height: 40,
+                          ), // Aumentado para mejor espaciado
                           GothicButton(
                             text: 'Iniciar Sesión',
+                            width:
+                                MediaQuery.of(context).size.width *
+                                0.7, // Ancho relativo
                             onPressed: () => context.go('/login'),
                           ),
                           const SizedBox(height: 16),
                           GothicButton(
                             text: 'Crear nuevo usuario',
+                            width:
+                                MediaQuery.of(context).size.width *
+                                0.7, // Ancho relativo
                             onPressed: () async {
                               setState(() => isLoading = true);
 
@@ -81,7 +88,7 @@ class _AuthWelcome extends State<AuthWelcome> {
                                     );
 
                                 Future.microtask(() {
-                                  context.go('/register-method');
+                                  context.go('/register-email');
                                 });
                               }
 
@@ -94,10 +101,10 @@ class _AuthWelcome extends State<AuthWelcome> {
                         ],
                       ),
             ),
-
-            // Ruido por encima del contenido (última capa)
             const Positioned.fill(
-              child: IgnorePointer(child: NoiseBackground(opacity: .1)),
+              child: IgnorePointer(
+                child: NoiseBackground(opacity: .05),
+              ), // Reducida opacidad
             ),
           ],
         ),
