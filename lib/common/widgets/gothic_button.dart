@@ -13,7 +13,7 @@ class GothicButton extends StatefulWidget {
     required this.text,
     required this.onPressed,
     this.width = double.infinity,
-    this.height = 56,
+    this.height = 48, // Reducido de 56
     this.icon,
   });
 
@@ -52,7 +52,6 @@ class _GothicButtonState extends State<GothicButton> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            // Marco SVG con transición animada
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 250),
               child: SvgPicture.asset(
@@ -64,7 +63,6 @@ class _GothicButtonState extends State<GothicButton> {
                 fit: BoxFit.fill,
               ),
             ),
-            // Fondo + contenido del botón
             Container(
               width: widget.width,
               height: widget.height,
@@ -74,16 +72,20 @@ class _GothicButtonState extends State<GothicButton> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   if (widget.icon != null) ...[
-                    Icon(widget.icon, color: const Color(0xFFCBB4D4), size: 24),
-                    const SizedBox(width: 8),
+                    Icon(
+                      widget.icon,
+                      color: const Color(0xFFCBB4D4),
+                      size: 20,
+                    ), // Reducido de 24
+                    const SizedBox(width: 6), // Reducido de 8
                   ],
                   Text(
                     widget.text,
                     style: const TextStyle(
                       fontFamily: 'Minion',
-                      fontSize: 22,
+                      fontSize: 18, // Reducido de 22
                       fontWeight: FontWeight.w600,
-                      letterSpacing: 1.2,
+                      letterSpacing: 1.0, // Reducido de 1.2
                       color: Color(0xFFCBB4D4),
                     ),
                   ),

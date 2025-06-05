@@ -11,7 +11,6 @@ import 'package:tournament_app/features/auth/presentation/page/auth_welcome_scre
 import 'package:tournament_app/features/auth/presentation/page/login_screen.dart';
 import 'package:tournament_app/features/auth/presentation/page/new_user_welcome_screen.dart';
 import 'package:tournament_app/features/auth/presentation/page/register_email_screen.dart';
-import 'package:tournament_app/features/auth/presentation/page/register_method_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
@@ -27,11 +26,6 @@ final appRouter = GoRouter(
       name: 'login screen',
       path: '/login',
       builder: (context, state) => const LoginScreen(),
-    ),
-    GoRoute(
-      name: 'register method',
-      path: '/register-method',
-      builder: (context, state) => const RegisterMethod(),
     ),
     GoRoute(
       name: 'new user welcome',
