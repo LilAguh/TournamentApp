@@ -46,6 +46,7 @@ dependencies:
   geocoding: ^2.1.0
   ip_country_lookup: ^1.0.3
   flutter_svg: ^2.0.7
+  pin_code_fields: ^8.0.1
 
 
 dev_dependencies:
