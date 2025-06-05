@@ -40,7 +40,7 @@ final appRouter = GoRouter(
     GoRoute(
       name: 'activate account',
       path: '/activate-account',
-      builder: (context, state) => const ActivateAccount(),
+      builder: (context, state) => const ActivateAccountScreen(),
     ),
     ShellRoute(
       builder: (context, state, child) => MainNavigationShell(child: child),
