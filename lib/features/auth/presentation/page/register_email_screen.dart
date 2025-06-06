@@ -372,13 +372,7 @@ class _RegisterEmailScreenState extends State<RegisterEmailScreen> {
                                 _socialIconButton(
                                   'assets/icons/apple.svg',
                                   onTap: () {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          'No disponible momentáneamente',
-                                        ),
-                                      ),
-                                    );
+                                    context.go('/activate-account');
                                   },
                                 ),
                               ],
