@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tournament_app/features/auth/domain/use_cases/register_use_cases.dart';
 import 'register_event.dart';
 import 'register_state.dart';
@@ -63,12 +64,19 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
         countryCode: 'BR',
       );
 
-      result.fold(
-        (failure) => emit(
-          state.copyWith(isLoading: false, errorMessage: failure.message),
-        ),
-        (_) => emit(state.copyWith(isLoading: false, isSuccess: true)),
-      );
+      if (result.isLeft()) {
+        final failure = result.fold(
+          (f) => f,
+          (_) => throw UnimplementedError(),
+        );
+        emit(state.copyWith(isLoading: false, errorMessage: failure.message));
+      } else {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('tempAlias', state.alias);
+        await prefs.setString('tempPassword', state.password);
+
+        emit(state.copyWith(isLoading: false, isSuccess: true));
+      }
     });
 
     on<RegisterResetSuccess>((event, emit) {
