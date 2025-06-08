@@ -21,86 +21,90 @@ class _AuthWelcome extends State<AuthWelcome> {
 
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle.light, // Íconos blancos
-      child: FramedBackground(
-        child: Stack(
-          children: [
-            // Contenido principal
-            Center(
-              child:
-                  isLoading
-                      ? const CircularProgressIndicator()
-                      : Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Paw of Fate',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFD6C8B0),
-                              fontSize: 100,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Classicloud',
-                            ),
+    return FramedBackground(
+      child: Stack(
+        children: [
+          Center(
+            child:
+                isLoading
+                    ? const CircularProgressIndicator()
+                    : Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Paw of Fate',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color(0xFFD6C8B0),
+                            fontSize: 100, // Reducido de 100
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Classicloud',
                           ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'Within your paws, the tarot whispers fate.',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFD6C8B0),
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Minion',
-                            ),
+                        ),
+                        const SizedBox(height: 8), // Reducido de 10
+                        const Text(
+                          'Within your paws, the tarot whispers fate.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color(0xFFD6C8B0),
+                            fontSize: 24, // Reducido de 30
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Minion',
                           ),
-                          const SizedBox(height: 20),
-                          GothicButton(
-                            text: 'Iniciar Sesión',
-                            onPressed: () => context.go('/login'),
-                          ),
-                          const SizedBox(height: 16),
-                          GothicButton(
-                            text: 'Crear nuevo usuario',
-                            onPressed: () async {
-                              setState(() => isLoading = true);
+                        ),
+                        const SizedBox(
+                          height: 40,
+                        ), // Aumentado para mejor espaciado
+                        GothicButton(
+                          text: 'Iniciar Sesión',
+                          width:
+                              MediaQuery.of(context).size.width *
+                              0.7, // Ancho relativo
+                          onPressed: () => context.go('/login'),
+                        ),
+                        const SizedBox(height: 16),
+                        GothicButton(
+                          text: 'Crear nuevo usuario',
+                          width:
+                              MediaQuery.of(context).size.width *
+                              0.7, // Ancho relativo
+                          onPressed: () async {
+                            setState(() => isLoading = true);
 
-                              final country =
-                                  await UserLocationService()
-                                      .getBestAvailableCountry();
-
-                              if (country != null) {
-                                countryCode = country.$1;
-                                countryName = country.$2;
-
+                            final country =
                                 await UserLocationService()
-                                    .saveCountryAndCodeToPrefs(
-                                      countryCode!,
-                                      countryName!,
-                                    );
+                                    .getBestAvailableCountry();
 
-                                Future.microtask(() {
-                                  context.go('/register-method');
-                                });
-                              }
+                            if (country != null) {
+                              countryCode = country.$1;
+                              countryName = country.$2;
 
-                              setState(() {
-                                isLoading = false;
-                                isDataLoaded = true;
+                              await UserLocationService()
+                                  .saveCountryAndCodeToPrefs(
+                                    countryCode!,
+                                    countryName!,
+                                  );
+
+                              Future.microtask(() {
+                                context.go('/register-email');
                               });
-                            },
-                          ),
-                        ],
-                      ),
-            ),
+                            }
 
-            // Ruido por encima del contenido (última capa)
-            const Positioned.fill(
-              child: IgnorePointer(child: NoiseBackground(opacity: .1)),
-            ),
-          ],
-        ),
+                            setState(() {
+                              isLoading = false;
+                              isDataLoaded = true;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+          ),
+          const Positioned.fill(
+            child: IgnorePointer(
+              child: NoiseBackground(opacity: .05),
+            ), // Reducida opacidad
+          ),
+        ],
       ),
     );
   }

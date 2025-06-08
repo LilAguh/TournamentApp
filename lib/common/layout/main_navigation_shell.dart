@@ -25,11 +25,11 @@ class MainNavigationShell extends StatelessWidget {
         selectedItemColor: Colors.green[400],
         type: BottomNavigationBarType.fixed,
         unselectedItemColor: Colors.grey,
-        selectedLabelStyle: TextStyle(
-          fontSize: 14,
+        selectedLabelStyle: const TextStyle(
+          fontSize: 12, // Reducido de 14
           fontWeight: FontWeight.bold,
         ),
-        unselectedLabelStyle: TextStyle(fontSize: 12),
+        unselectedLabelStyle: const TextStyle(fontSize: 10), // Reducido de 12
         currentIndex: currentIndex,
         onTap: (i) {
           switch (i) {
@@ -52,23 +52,23 @@ class MainNavigationShell extends StatelessWidget {
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, size: 30),
+            icon: Icon(Icons.home, size: 24), // Reducido de 30
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard, size: 30),
+            icon: Icon(Icons.dashboard, size: 24), // Reducido de 30
             label: 'Deck',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.videogame_asset, size: 30),
+            icon: Icon(Icons.videogame_asset, size: 24), // Reducido de 30
             label: 'Match',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.emoji_events, size: 30),
+            icon: Icon(Icons.emoji_events, size: 24), // Reducido de 30
             label: 'Torneos',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person, size: 30),
+            icon: Icon(Icons.person, size: 24), // Reducido de 30
             label: 'Perfil',
           ),
         ],

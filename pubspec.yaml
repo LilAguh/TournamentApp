@@ -46,6 +46,7 @@ dependencies:
   geocoding: ^2.1.0
   ip_country_lookup: ^1.0.3
   flutter_svg: ^2.0.7
+  pin_code_fields: ^8.0.1
 
 
 dev_dependencies:
@@ -89,6 +90,9 @@ flutter:
     - assets/borders/ornamental-frame.svg
     - assets/borders/ornamental-frame-2.svg
     - assets/images/noise.png
+    - assets/icons/google.svg
+    - assets/icons/facebook.svg
+    - assets/icons/apple.svg
 
 
   # The following line ensures that the Material Icons font is
