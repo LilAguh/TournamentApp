@@ -1,10 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class MainNavigationShell extends StatelessWidget {
+class MainNavigationShell extends StatefulWidget {
   final Widget child;
 
   const MainNavigationShell({super.key, required this.child});
+
+  @override
+  State<MainNavigationShell> createState() => _MainNavigationShellState();
+}
+
+class _MainNavigationShellState extends State<MainNavigationShell> {
+  int role = 1; // valor por defecto
+
+  @override
+  void initState() {
+    super.initState();
+    _loadRole();
+  }
+
+  Future<void> _loadRole() async {
+    final prefs = await SharedPreferences.getInstance();
+    final storedRole = prefs.getInt('userRole') ?? 1; // <- cambio importante
+
+    setState(() {
+      role = storedRole;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,59 +42,79 @@ class MainNavigationShell extends StatelessWidget {
       _ => 0,
     };
 
+    final items = <BottomNavigationBarItem>[
+      const BottomNavigationBarItem(
+        icon: Icon(Icons.home, size: 24),
+        label: 'Home',
+      ),
+      if (role == 1 || role == 3) // jugador o juez
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.dashboard, size: 24),
+          label: 'Deck',
+        ),
+      if (role == 1 || role == 3) // jugador o juez
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.videogame_asset, size: 24),
+          label: 'Match',
+        ),
+      const BottomNavigationBarItem(
+        icon: Icon(Icons.emoji_events, size: 24),
+        label: 'Torneos',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(Icons.person, size: 24),
+        label: 'Perfil',
+      ),
+    ];
+
     return Scaffold(
-      body: child,
+      body: widget.child,
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.green[400],
         type: BottomNavigationBarType.fixed,
         unselectedItemColor: Colors.grey,
         selectedLabelStyle: const TextStyle(
-          fontSize: 12, // Reducido de 14
+          fontSize: 12,
           fontWeight: FontWeight.bold,
         ),
-        unselectedLabelStyle: const TextStyle(fontSize: 10), // Reducido de 12
+        unselectedLabelStyle: const TextStyle(fontSize: 10),
         currentIndex: currentIndex,
         onTap: (i) {
-          switch (i) {
-            case 0:
-              context.goNamed('home');
-              break;
-            case 1:
-              context.goNamed('deck');
-              break;
-            case 2:
-              context.goNamed('match');
-              break;
-            case 3:
-              context.goNamed('tournaments');
-              break;
-            case 4:
-              context.goNamed('profile');
-              break;
+          // La lógica depende de cuántos ítems hay, tenés que mapear manualmente según el rol
+          if (role == 1 || role == 3) {
+            switch (i) {
+              case 0:
+                context.goNamed('home');
+                break;
+              case 1:
+                context.goNamed('deck');
+                break;
+              case 2:
+                context.goNamed('match');
+                break;
+              case 3:
+                context.goNamed('tournaments');
+                break;
+              case 4:
+                context.goNamed('profile');
+                break;
+            }
+          } else {
+            // rol 2 (admin) o 4 (organizer), sin deck ni match
+            switch (i) {
+              case 0:
+                context.goNamed('home');
+                break;
+              case 1:
+                context.goNamed('tournaments');
+                break;
+              case 2:
+                context.goNamed('profile');
+                break;
+            }
           }
         },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home, size: 24), // Reducido de 30
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard, size: 24), // Reducido de 30
-            label: 'Deck',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.videogame_asset, size: 24), // Reducido de 30
-            label: 'Match',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.emoji_events, size: 24), // Reducido de 30
-            label: 'Torneos',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person, size: 24), // Reducido de 30
-            label: 'Perfil',
-          ),
-        ],
+        items: items,
       ),
     );
   }
