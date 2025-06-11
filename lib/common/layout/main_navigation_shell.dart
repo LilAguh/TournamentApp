@@ -13,6 +13,7 @@ class MainNavigationShell extends StatefulWidget {
 
 class _MainNavigationShellState extends State<MainNavigationShell> {
   int role = 1; // valor por defecto
+  int currentIndex = 0;
 
   @override
   void initState() {
@@ -78,7 +79,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
           fontWeight: FontWeight.bold,
         ),
         unselectedLabelStyle: const TextStyle(fontSize: 10),
-        currentIndex: currentIndex,
+        currentIndex: currentIndex.clamp(0, items.length - 1),
         onTap: (i) {
           // La lógica depende de cuántos ítems hay, tenés que mapear manualmente según el rol
           if (role == 1 || role == 3) {

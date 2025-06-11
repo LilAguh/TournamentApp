@@ -53,7 +53,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     emit(state.copyWith(isLoading: true, errorMessage: null));
     final token = prefs.getString('authToken') ?? '';
 
-    final result = await getProfile(event.userId, token);
+    final result = await getProfile(userId: event.userId, token: token);
     result.fold(
       (failure) =>
           emit(state.copyWith(isLoading: false, errorMessage: failure.message)),
@@ -90,7 +90,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       avatarUrl: state.avatarUrl,
     );
 
-    final result = await updateProfile(updated, token);
+    final result = await updateProfile(profile: updated, token: token);
     result.fold(
       (failure) =>
           emit(state.copyWith(isLoading: false, errorMessage: failure.message)),
@@ -107,7 +107,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     emit(state.copyWith(isLoading: true, errorMessage: null));
     final token = prefs.getString('authToken') ?? '';
 
-    final result = await deactivateAccount(event.userId, token);
+    final result = await deactivateAccount(userId: event.userId, token: token);
     result.fold(
       (failure) =>
           emit(state.copyWith(isLoading: false, errorMessage: failure.message)),
@@ -122,7 +122,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     emit(state.copyWith(isLoading: true, errorMessage: null));
     final token = prefs.getString('authToken') ?? '';
 
-    final result = await deleteAccount(event.userId, token);
+    final result = await deleteAccount(userId: event.userId, token: token);
     result.fold(
       (failure) =>
           emit(state.copyWith(isLoading: false, errorMessage: failure.message)),
@@ -138,10 +138,10 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     final token = prefs.getString('authToken') ?? '';
 
     final result = await changePassword(
-      event.userId,
-      state.newPassword,
-      state.currentPassword,
-      token,
+      userId: event.userId,
+      newPassword: state.newPassword,
+      password: state.currentPassword,
+      token: token,
     );
 
     result.fold(

@@ -1,6 +1,8 @@
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tournament_app/core/network/api_dio.dart';
+import 'package:tournament_app/features/profile/data/datasources/profile_local_data_source.dart';
+import 'package:tournament_app/features/profile/data/datasources/profile_local_data_source_impl.dart';
 import 'package:tournament_app/features/profile/data/datasources/profile_remote_data_source.dart';
 import 'package:tournament_app/features/profile/data/datasources/profile_remote_data_source_impl.dart';
 import 'package:tournament_app/features/profile/data/repositories/profile_repository_impl.dart';
@@ -14,43 +16,37 @@ import 'package:tournament_app/features/profile/presentation/bloc/profile_bloc.d
 
 final sl = GetIt.instance;
 
-// Future<void> initProfileConfig() async {
-//   // Cliente HTTP centralizado
-//   sl.registerLazySingleton(() => ApiDio(dioUser: dioUser));
+Future<void> initProfileConfig() async {
+  // Local + Remote Data Sources
+  sl.registerLazySingleton<ProfileLocalDataSource>(
+    () => ProfileLocalDataSourceImpl(prefs: sl()),
+  );
 
-//   // Remote data source
-//   sl.registerLazySingleton<ProfileRemoteDataSource>(
-//     () => ProfileRemoteDataSourceImpl(apiDio: sl()),
-//   );
+  sl.registerLazySingleton<ProfileRemoteDataSource>(
+    () => ProfileRemoteDataSourceImpl(apiDio: sl()),
+  );
 
-//   // Repository
-//   sl.registerLazySingleton<ProfileRepository>(
-//     () => ProfileRepositoryImpl(remoteDataSource: sl(), localDataSource: sl()),
-//   );
+  // Repositorio
+  sl.registerLazySingleton<ProfileRepository>(
+    () => ProfileRepositoryImpl(remoteDataSource: sl(), localDataSource: sl()),
+  );
 
-//   // Use Case
-//   sl.registerLazySingleton(() => ChangePasswordUseCase(repository: sl()));
-//   sl.registerLazySingleton(() => DeleteAccountUseCase(repository: sl()));
-//   sl.registerLazySingleton(() => DeactivateAccountUseCase(repository: sl()));
-//   sl.registerLazySingleton(() => GetProfileUseCase(repository: sl()));
-//   sl.registerLazySingleton(() => UpdateProfileUseCase(repository: sl()));
+  // Casos de uso
+  sl.registerLazySingleton(() => GetProfileUseCase(repository: sl()));
+  sl.registerLazySingleton(() => UpdateProfileUseCase(repository: sl()));
+  sl.registerLazySingleton(() => DeactivateAccountUseCase(repository: sl()));
+  sl.registerLazySingleton(() => DeleteAccountUseCase(repository: sl()));
+  sl.registerLazySingleton(() => ChangePasswordUseCase(repository: sl()));
 
-//   // bloc
-//   sl.registerFactory(
-//     () => ProfileBloc(
-//       getProfile: sl(),
-//       updateProfile: sl(),
-//       deactivateAccount: sl(),
-//       deleteAccount: sl(),
-//       changePassword: sl(),
-//     ),
-//   );
-
-  // SharedPreferences
-  // final prefs = await SharedPreferences.getInstance();
-
-  // sl.registerLazySingleton<SharedPreferences>(() => prefs);
-  // sl.registerLazySingleton<ProfileLocalDataSource>(
-  //   () => ProfileLocalDataSourceImpl(prefs: sl()),
-  // );
-// }
+  // Bloc
+  sl.registerFactory(
+    () => ProfileBloc(
+      getProfile: sl(),
+      updateProfile: sl(),
+      deactivateAccount: sl(),
+      deleteAccount: sl(),
+      changePassword: sl(),
+      prefs: sl(),
+    ),
+  );
+}

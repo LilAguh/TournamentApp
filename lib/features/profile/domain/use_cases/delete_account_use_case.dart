@@ -5,9 +5,12 @@ import 'package:tournament_app/features/profile/domain/repository/profile_reposi
 class DeleteAccountUseCase {
   final ProfileRepository repository;
 
-  DeleteAccountUseCase(this.repository);
+  DeleteAccountUseCase({required this.repository});
 
-  Future<Either<Failure, void>> call(int userId, String token) {
-    return repository.deleteAccount(userId, token);
+  Future<Either<Failure, void>> call({
+    required int userId,
+    required String token,
+  }) async {
+    return await repository.deleteAccount(userId, token);
   }
 }

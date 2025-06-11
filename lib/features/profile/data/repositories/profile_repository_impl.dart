@@ -6,15 +6,20 @@ import 'package:tournament_app/features/profile/domain/repository/profile_reposi
 
 class ProfileRepositoryImpl implements ProfileRepository {
   final ProfileRemoteDataSource remoteDataSource;
+  final ProfileRemoteDataSource localDataSource;
 
-  ProfileRepositoryImpl({required this.remoteDataSource});
+  ProfileRepositoryImpl({
+    required this.remoteDataSource,
+    required this.localDataSource,
+  });
 
   @override
   Future<Either<Failure, Profile>> getProfile(int userId, String token) async {
     try {
-      final result = await remoteDataSource.getProfile(userId, token);
-      return Right(result);
+      final profile = await remoteDataSource.getProfile(userId, token);
+      return Right(profile);
     } catch (e) {
+      print('[PROFILE][ERROR] Exception: $e'); // ← AÑADÍ ESTO
       return Left(ServerFailure(message: 'Error al obtener el perfil'));
     }
   }
@@ -56,22 +61,22 @@ class ProfileRepositoryImpl implements ProfileRepository {
   }
 
   @override
-  Future<Either<Failure, void>> changePassword(
-    int userId,
-    String newPassword,
-    String password,
-    String token,
-  ) async {
+  Future<Either<Failure, void>> changePassword({
+    required int userId,
+    required String password,
+    required String newPassword,
+    required String token,
+  }) async {
     try {
       await remoteDataSource.changePassword(
-        userId,
-        newPassword,
-        password,
-        token,
+        userId: userId,
+        password: password,
+        newPassword: newPassword,
+        token: token,
       );
-      return const Right(null);
+      return Right(null);
     } catch (e) {
-      return Left(ServerFailure(message: 'Error al cambiar contraseña'));
+      return Left(ServerFailure(message: 'Error al cambiar la contraseña'));
     }
   }
 }

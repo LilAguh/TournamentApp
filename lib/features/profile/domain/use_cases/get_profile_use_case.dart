@@ -6,9 +6,12 @@ import 'package:tournament_app/features/profile/domain/repository/profile_reposi
 class GetProfileUseCase {
   final ProfileRepository repository;
 
-  GetProfileUseCase(this.repository);
+  GetProfileUseCase({required this.repository});
 
-  Future<Either<Failure, Profile>> call(int userId, String token) {
-    return repository.getProfile(userId, token);
+  Future<Either<Failure, Profile>> call({
+    required int userId,
+    required String token,
+  }) async {
+    return await repository.getProfile(userId, token);
   }
 }

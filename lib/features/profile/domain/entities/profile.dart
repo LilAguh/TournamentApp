@@ -1,36 +1,29 @@
-import 'package:tournament_app/features/auth/domain/enum/user_role.dart';
-
 class Profile {
   final int id;
-  final UserRole role;
-  final String firstName;
-  final String lastName;
-  final String alias;
   final String email;
+  final String alias;
+  final String passwordHash;
   final String countryCode;
   final String avatarUrl;
-  final DateTime? lastLogin;
+  final String createdAt;
+  final String? lastLogin;
   final bool isActive;
 
   Profile({
     required this.id,
-    required this.role,
-    required this.firstName,
-    required this.lastName,
     required this.alias,
     required this.email,
     required this.countryCode,
+    required this.passwordHash,
     required this.avatarUrl,
     this.lastLogin,
     required this.isActive,
+    required this.createdAt,
   });
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'role': _mapUserRoleToInt(role),
-      'firstName': firstName,
-      'lastName': lastName,
       'alias': alias,
       'email': email,
       'countryCode': countryCode,
@@ -43,49 +36,38 @@ class Profile {
   factory Profile.fromJson(Map<String, dynamic> json) {
     return Profile(
       id: json['id'],
-      role: json['role'],
-      firstName: json['firstName'],
-      lastName: json['lastName'],
-      alias: json['alias'],
       email: json['email'],
+      alias: json['alias'],
+      passwordHash: json['passwordHash'],
       countryCode: json['countryCode'],
       avatarUrl: json['avatarUrl'],
-      lastLogin:
-          json['lastLogin'] != null ? DateTime.parse(json['lastLogin']) : null,
+      createdAt: json['createdAt'],
+      lastLogin: json['lastLogin'],
       isActive: json['isActive'],
     );
   }
 
   Profile copyWith({
-    String? alias,
+    int? id,
     String? email,
+    String? alias,
+    String? passwordHash,
     String? countryCode,
     String? avatarUrl,
+    String? createdAt,
+    String? lastLogin,
+    bool? isActive,
   }) {
     return Profile(
-      id: id,
-      role: role,
-      firstName: firstName,
-      lastName: lastName,
-      alias: alias ?? this.alias,
+      id: id ?? this.id,
       email: email ?? this.email,
+      alias: alias ?? this.alias,
+      passwordHash: passwordHash ?? this.passwordHash,
       countryCode: countryCode ?? this.countryCode,
       avatarUrl: avatarUrl ?? this.avatarUrl,
-      lastLogin: lastLogin,
-      isActive: isActive,
+      createdAt: createdAt ?? this.createdAt,
+      lastLogin: lastLogin ?? this.lastLogin,
+      isActive: isActive ?? this.isActive,
     );
-  }
-
-  static int _mapUserRoleToInt(UserRole role) {
-    switch (role) {
-      case UserRole.player:
-        return 1;
-      case UserRole.admin:
-        return 2;
-      case UserRole.judge:
-        return 3;
-      case UserRole.organizer:
-        return 4;
-    }
   }
 }

@@ -51,18 +51,4 @@ class ProfileState {
       newPassword: newPassword ?? this.newPassword,
     );
   }
-
-  @override
-  List<Object?> get props => [
-    profile,
-    isLoading,
-    success,
-    errorMessage,
-    alias,
-    email,
-    countryCode,
-    avatarUrl,
-    currentPassword,
-    newPassword,
-  ];
 }
