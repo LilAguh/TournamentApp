@@ -62,7 +62,7 @@ final appRouter = GoRouter(
         GoRoute(
           name: 'profile',
           path: '/profile',
-          builder: (_, __) => const Profile(),
+          builder: (_, __) => const ProfileScreen(),
         ),
       ],
     ),
