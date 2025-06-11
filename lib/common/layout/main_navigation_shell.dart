@@ -12,7 +12,7 @@ class MainNavigationShell extends StatefulWidget {
 }
 
 class _MainNavigationShellState extends State<MainNavigationShell> {
-  int role = 1; // valor por defecto
+  int role = 1;
   int currentIndex = 0;
 
   @override
@@ -23,10 +23,8 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
 
   Future<void> _loadRole() async {
     final prefs = await SharedPreferences.getInstance();
-    final storedRole = prefs.getInt('userRole') ?? 1; // <- cambio importante
-
     setState(() {
-      role = storedRole;
+      role = prefs.getInt('userRole') ?? 1;
     });
   }
 
@@ -34,26 +32,40 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
   Widget build(BuildContext context) {
     final location = GoRouterState.of(context).uri.toString();
 
-    int currentIndex = switch (location) {
-      var l when l.startsWith('/home') => 0,
-      var l when l.startsWith('/deck') => 1,
-      var l when l.startsWith('/match') => 2,
-      var l when l.startsWith('/tournaments') => 3,
-      var l when l.startsWith('/profile') => 4,
-      _ => 0,
-    };
+    // Calcular currentIndex basado en el rol
+    int calculateIndex() {
+      if (role == 1 || role == 3) {
+        // Jugador o juez
+        return switch (location) {
+          var l when l.startsWith('/home') => 0,
+          var l when l.startsWith('/deck') => 1,
+          var l when l.startsWith('/match') => 2,
+          var l when l.startsWith('/tournaments') => 3,
+          var l when l.startsWith('/profile') => 4,
+          _ => 0,
+        };
+      } else {
+        // Admin u organizador
+        return switch (location) {
+          var l when l.startsWith('/home') => 0,
+          var l when l.startsWith('/tournaments') => 1,
+          var l when l.startsWith('/profile') => 2,
+          _ => 0,
+        };
+      }
+    }
 
     final items = <BottomNavigationBarItem>[
       const BottomNavigationBarItem(
         icon: Icon(Icons.home, size: 24),
         label: 'Home',
       ),
-      if (role == 1 || role == 3) // jugador o juez
+      if (role == 1 || role == 3)
         const BottomNavigationBarItem(
           icon: Icon(Icons.dashboard, size: 24),
           label: 'Deck',
         ),
-      if (role == 1 || role == 3) // jugador o juez
+      if (role == 1 || role == 3)
         const BottomNavigationBarItem(
           icon: Icon(Icons.videogame_asset, size: 24),
           label: 'Match',
@@ -79,39 +91,29 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
           fontWeight: FontWeight.bold,
         ),
         unselectedLabelStyle: const TextStyle(fontSize: 10),
-        currentIndex: currentIndex.clamp(0, items.length - 1),
+        currentIndex: calculateIndex(),
         onTap: (i) {
-          // La lógica depende de cuántos ítems hay, tenés que mapear manualmente según el rol
           if (role == 1 || role == 3) {
             switch (i) {
               case 0:
                 context.goNamed('home');
-                break;
               case 1:
                 context.goNamed('deck');
-                break;
               case 2:
                 context.goNamed('match');
-                break;
               case 3:
                 context.goNamed('tournaments');
-                break;
               case 4:
                 context.goNamed('profile');
-                break;
             }
           } else {
-            // rol 2 (admin) o 4 (organizer), sin deck ni match
             switch (i) {
               case 0:
                 context.goNamed('home');
-                break;
               case 1:
                 context.goNamed('tournaments');
-                break;
               case 2:
                 context.goNamed('profile');
-                break;
             }
           }
         },
