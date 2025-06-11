@@ -39,10 +39,6 @@ Future<void> initAuthConfig() async {
   sl.registerFactory(() => AuthBloc(loginUseCase: sl()));
   sl.registerFactory(() => RegisterBloc(registerUseCase: sl()));
 
-  // SharedPreferences
-  final prefs = await SharedPreferences.getInstance();
-
-  sl.registerLazySingleton<SharedPreferences>(() => prefs);
   sl.registerLazySingleton<AuthLocalDataSource>(
     () => AuthLocalDataSourceImpl(prefs: sl()),
   );

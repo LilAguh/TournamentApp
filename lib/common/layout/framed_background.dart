@@ -13,6 +13,7 @@ class FramedBackground extends StatelessWidget {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
+        resizeToAvoidBottomInset: false, // ¡Importante!
         backgroundColor: const Color(0xFF0D0D0D),
         body: Stack(
           children: [
@@ -33,14 +34,15 @@ class FramedBackground extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 44.0,
-                    ), // Reducido de 50.0
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        minHeight: MediaQuery.of(context).size.height,
+                    padding: const EdgeInsets.symmetric(horizontal: 44.0),
+                    child: SingleChildScrollView(
+                      // Permite desplazamiento
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          minHeight: MediaQuery.of(context).size.height,
+                        ),
+                        child: IntrinsicHeight(child: child),
                       ),
-                      child: IntrinsicHeight(child: child),
                     ),
                   ),
                 ],
