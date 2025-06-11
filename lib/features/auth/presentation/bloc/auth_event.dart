@@ -26,4 +26,4 @@ class SelectCoutryRegister extends AuthEvent {
   SelectCoutryRegister(this.countryId);
 }
 
-class LogoutSubmitter extends AuthEvent {}
+class AuthLogoutRequested extends AuthEvent {}

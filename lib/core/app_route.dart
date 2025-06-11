@@ -1,3 +1,4 @@
+import 'package:tournament_app/common/layout/startup_screen.dart';
 import 'package:tournament_app/features/deck/presentation/page/deck_screen.dart';
 import 'package:tournament_app/features/home/presentation/page/home_screen.dart';
 import 'package:tournament_app/features/match/presentation/page/match_screen.dart';
@@ -14,9 +15,10 @@ import 'package:tournament_app/features/auth/presentation/page/register_email_sc
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/auth-welcome',
+  initialLocation: '/',
 
   routes: [
+    GoRoute(path: '/', builder: (context, state) => const StartupScreen()),
     GoRoute(
       name: 'auth welcome',
       path: '/auth-welcome',
@@ -60,7 +62,7 @@ final appRouter = GoRouter(
         GoRoute(
           name: 'profile',
           path: '/profile',
-          builder: (_, __) => const Profile(),
+          builder: (_, __) => const ProfileScreen(),
         ),
       ],
     ),
