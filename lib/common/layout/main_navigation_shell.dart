@@ -38,7 +38,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
         // Jugador o juez
         return switch (location) {
           var l when l.startsWith('/home') => 0,
-          var l when l.startsWith('/deck') => 1,
+          var l when l.startsWith('/card') => 1,
           var l when l.startsWith('/match') => 2,
           var l when l.startsWith('/tournaments') => 3,
           var l when l.startsWith('/profile') => 4,
@@ -63,7 +63,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
       if (role == 1 || role == 3)
         const BottomNavigationBarItem(
           icon: Icon(Icons.dashboard, size: 24),
-          label: 'Deck',
+          label: 'Card',
         ),
       if (role == 1 || role == 3)
         const BottomNavigationBarItem(
@@ -98,7 +98,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
               case 0:
                 context.goNamed('home');
               case 1:
-                context.goNamed('deck');
+                context.goNamed('card');
               case 2:
                 context.goNamed('match');
               case 3:

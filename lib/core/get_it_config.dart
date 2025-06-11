@@ -1,5 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tournament_app/features/auth/config/auth_config.dart';
+import 'package:tournament_app/features/card/config/card_config.dart' hide sl;
 import 'package:tournament_app/features/country/config/country_config.dart'
     hide sl;
 import 'package:tournament_app/features/profile/config/profile_config.dart'
@@ -13,4 +14,5 @@ Future<void> configureGetItApp() async {
   await initAuthConfig();
   initCountryConfig();
   await initProfileConfig(); // esto ya no debe volver a registrar prefs
+  initCardFeature();
 }

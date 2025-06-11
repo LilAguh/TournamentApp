@@ -1,4 +1,5 @@
 import 'package:tournament_app/common/layout/startup_screen.dart';
+import 'package:tournament_app/features/card/presentation/pages/card_screen.dart';
 import 'package:tournament_app/features/deck/presentation/page/deck_screen.dart';
 import 'package:tournament_app/features/home/presentation/page/home_screen.dart';
 import 'package:tournament_app/features/match/presentation/page/match_screen.dart';
@@ -48,7 +49,11 @@ final appRouter = GoRouter(
       builder: (context, state, child) => MainNavigationShell(child: child),
       routes: [
         GoRoute(name: 'home', path: '/home', builder: (_, __) => const Home()),
-        GoRoute(name: 'deck', path: '/deck', builder: (_, __) => const Deck()),
+        GoRoute(
+          name: 'card',
+          path: '/card',
+          builder: (_, __) => const CardScreen(),
+        ),
         GoRoute(
           name: 'match',
           path: '/match',

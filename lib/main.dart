@@ -4,6 +4,7 @@ import 'package:tournament_app/core/get_it_config.dart';
 import 'package:tournament_app/features/auth/config/auth_config.dart';
 import 'package:tournament_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:tournament_app/features/auth/presentation/register/bloc/register_bloc.dart';
+import 'package:tournament_app/features/card/presentation/bloc/card_bloc.dart';
 import 'package:tournament_app/features/country/presentation/bloc/country_bloc.dart';
 import 'package:tournament_app/features/profile/presentation/bloc/profile_bloc.dart';
 import 'core/app_route.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => sl<CountryBloc>()),
         BlocProvider(create: (_) => sl<RegisterBloc>()),
         BlocProvider(create: (_) => sl<ProfileBloc>()),
+        BlocProvider(create: (_) => sl<CardBloc>()),
       ],
       child: MaterialApp.router(
         title: 'Tournament APP',

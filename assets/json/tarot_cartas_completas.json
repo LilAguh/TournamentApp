@@ -1,0 +1,3702 @@
+[
+  {
+    "id": "arcano_00_gato",
+    "name": {
+      "es": "El Loco",
+      "en": "The Fool"
+    },
+    "description": {
+      "es": "El Loco es una carta con poder simbólico en el tarot.",
+      "en": "The Fool is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_loco_gato.png"
+  },
+  {
+    "id": "arcano_00_perro",
+    "name": {
+      "es": "El Loco",
+      "en": "The Fool"
+    },
+    "description": {
+      "es": "El Loco es una carta con poder simbólico en el tarot.",
+      "en": "The Fool is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 2,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/el_loco_perro.png"
+  },
+  {
+    "id": "arcano_01_gato",
+    "name": {
+      "es": "El Mago",
+      "en": "The Magician"
+    },
+    "description": {
+      "es": "El Mago es una carta con poder simbólico en el tarot.",
+      "en": "The Magician is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 6,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/el_mago_gato.png"
+  },
+  {
+    "id": "arcano_01_perro",
+    "name": {
+      "es": "El Mago",
+      "en": "The Magician"
+    },
+    "description": {
+      "es": "El Mago es una carta con poder simbólico en el tarot.",
+      "en": "The Magician is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_mago_perro.png"
+  },
+  {
+    "id": "arcano_02_gato",
+    "name": {
+      "es": "La Sacerdotisa",
+      "en": "The High Priestess"
+    },
+    "description": {
+      "es": "La Sacerdotisa es una carta con poder simbólico en el tarot.",
+      "en": "The High Priestess is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/la_sacerdotisa_gato.png"
+  },
+  {
+    "id": "arcano_02_perro",
+    "name": {
+      "es": "La Sacerdotisa",
+      "en": "The High Priestess"
+    },
+    "description": {
+      "es": "La Sacerdotisa es una carta con poder simbólico en el tarot.",
+      "en": "The High Priestess is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/la_sacerdotisa_perro.png"
+  },
+  {
+    "id": "arcano_03_gato",
+    "name": {
+      "es": "La Emperatriz",
+      "en": "The Empress"
+    },
+    "description": {
+      "es": "La Emperatriz es una carta con poder simbólico en el tarot.",
+      "en": "The Empress is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/la_emperatriz_gato.png"
+  },
+  {
+    "id": "arcano_03_perro",
+    "name": {
+      "es": "La Emperatriz",
+      "en": "The Empress"
+    },
+    "description": {
+      "es": "La Emperatriz es una carta con poder simbólico en el tarot.",
+      "en": "The Empress is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 2,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/la_emperatriz_perro.png"
+  },
+  {
+    "id": "arcano_04_gato",
+    "name": {
+      "es": "El Emperador",
+      "en": "The Emperor"
+    },
+    "description": {
+      "es": "El Emperador es una carta con poder simbólico en el tarot.",
+      "en": "The Emperor is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 3,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/el_emperador_gato.png"
+  },
+  {
+    "id": "arcano_04_perro",
+    "name": {
+      "es": "El Emperador",
+      "en": "The Emperor"
+    },
+    "description": {
+      "es": "El Emperador es una carta con poder simbólico en el tarot.",
+      "en": "The Emperor is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/el_emperador_perro.png"
+  },
+  {
+    "id": "arcano_05_gato",
+    "name": {
+      "es": "El Hierofante",
+      "en": "The Hierophant"
+    },
+    "description": {
+      "es": "El Hierofante es una carta con poder simbólico en el tarot.",
+      "en": "The Hierophant is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 3,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/el_hierofante_gato.png"
+  },
+  {
+    "id": "arcano_05_perro",
+    "name": {
+      "es": "El Hierofante",
+      "en": "The Hierophant"
+    },
+    "description": {
+      "es": "El Hierofante es una carta con poder simbólico en el tarot.",
+      "en": "The Hierophant is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 2,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/el_hierofante_perro.png"
+  },
+  {
+    "id": "arcano_06_gato",
+    "name": {
+      "es": "Los Enamorados",
+      "en": "The Lovers"
+    },
+    "description": {
+      "es": "Los Enamorados es una carta con poder simbólico en el tarot.",
+      "en": "The Lovers is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 3,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/los_enamorados_gato.png"
+  },
+  {
+    "id": "arcano_06_perro",
+    "name": {
+      "es": "Los Enamorados",
+      "en": "The Lovers"
+    },
+    "description": {
+      "es": "Los Enamorados es una carta con poder simbólico en el tarot.",
+      "en": "The Lovers is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 2,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/los_enamorados_perro.png"
+  },
+  {
+    "id": "arcano_07_gato",
+    "name": {
+      "es": "El Carro",
+      "en": "The Chariot"
+    },
+    "description": {
+      "es": "El Carro es una carta con poder simbólico en el tarot.",
+      "en": "The Chariot is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_carro_gato.png"
+  },
+  {
+    "id": "arcano_07_perro",
+    "name": {
+      "es": "El Carro",
+      "en": "The Chariot"
+    },
+    "description": {
+      "es": "El Carro es una carta con poder simbólico en el tarot.",
+      "en": "The Chariot is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 5,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/el_carro_perro.png"
+  },
+  {
+    "id": "arcano_08_gato",
+    "name": {
+      "es": "La Fuerza",
+      "en": "Strength"
+    },
+    "description": {
+      "es": "La Fuerza es una carta con poder simbólico en el tarot.",
+      "en": "Strength is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 6,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/la_fuerza_gato.png"
+  },
+  {
+    "id": "arcano_08_perro",
+    "name": {
+      "es": "La Fuerza",
+      "en": "Strength"
+    },
+    "description": {
+      "es": "La Fuerza es una carta con poder simbólico en el tarot.",
+      "en": "Strength is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/la_fuerza_perro.png"
+  },
+  {
+    "id": "arcano_09_gato",
+    "name": {
+      "es": "El Ermitaño",
+      "en": "The Hermit"
+    },
+    "description": {
+      "es": "El Ermitaño es una carta con poder simbólico en el tarot.",
+      "en": "The Hermit is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_ermitaño_gato.png"
+  },
+  {
+    "id": "arcano_09_perro",
+    "name": {
+      "es": "El Ermitaño",
+      "en": "The Hermit"
+    },
+    "description": {
+      "es": "El Ermitaño es una carta con poder simbólico en el tarot.",
+      "en": "The Hermit is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_ermitaño_perro.png"
+  },
+  {
+    "id": "arcano_10_gato",
+    "name": {
+      "es": "La Rueda de la Fortuna",
+      "en": "Wheel of Fortune"
+    },
+    "description": {
+      "es": "La Rueda de la Fortuna es una carta con poder simbólico en el tarot.",
+      "en": "Wheel of Fortune is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/la_rueda_de_la_fortuna_gato.png"
+  },
+  {
+    "id": "arcano_10_perro",
+    "name": {
+      "es": "La Rueda de la Fortuna",
+      "en": "Wheel of Fortune"
+    },
+    "description": {
+      "es": "La Rueda de la Fortuna es una carta con poder simbólico en el tarot.",
+      "en": "Wheel of Fortune is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/la_rueda_de_la_fortuna_perro.png"
+  },
+  {
+    "id": "arcano_11_gato",
+    "name": {
+      "es": "La Justicia",
+      "en": "Justice"
+    },
+    "description": {
+      "es": "La Justicia es una carta con poder simbólico en el tarot.",
+      "en": "Justice is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/la_justicia_gato.png"
+  },
+  {
+    "id": "arcano_11_perro",
+    "name": {
+      "es": "La Justicia",
+      "en": "Justice"
+    },
+    "description": {
+      "es": "La Justicia es una carta con poder simbólico en el tarot.",
+      "en": "Justice is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 5,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/la_justicia_perro.png"
+  },
+  {
+    "id": "arcano_12_gato",
+    "name": {
+      "es": "El Colgado",
+      "en": "The Hanged Man"
+    },
+    "description": {
+      "es": "El Colgado es una carta con poder simbólico en el tarot.",
+      "en": "The Hanged Man is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 7,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/el_colgado_gato.png"
+  },
+  {
+    "id": "arcano_12_perro",
+    "name": {
+      "es": "El Colgado",
+      "en": "The Hanged Man"
+    },
+    "description": {
+      "es": "El Colgado es una carta con poder simbólico en el tarot.",
+      "en": "The Hanged Man is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 2,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_colgado_perro.png"
+  },
+  {
+    "id": "arcano_13_gato",
+    "name": {
+      "es": "La Muerte",
+      "en": "Death"
+    },
+    "description": {
+      "es": "La Muerte es una carta con poder simbólico en el tarot.",
+      "en": "Death is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/la_muerte_gato.png"
+  },
+  {
+    "id": "arcano_13_perro",
+    "name": {
+      "es": "La Muerte",
+      "en": "Death"
+    },
+    "description": {
+      "es": "La Muerte es una carta con poder simbólico en el tarot.",
+      "en": "Death is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 5,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/la_muerte_perro.png"
+  },
+  {
+    "id": "arcano_14_gato",
+    "name": {
+      "es": "La Templanza",
+      "en": "Temperance"
+    },
+    "description": {
+      "es": "La Templanza es una carta con poder simbólico en el tarot.",
+      "en": "Temperance is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 7,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/la_templanza_gato.png"
+  },
+  {
+    "id": "arcano_14_perro",
+    "name": {
+      "es": "La Templanza",
+      "en": "Temperance"
+    },
+    "description": {
+      "es": "La Templanza es una carta con poder simbólico en el tarot.",
+      "en": "Temperance is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/la_templanza_perro.png"
+  },
+  {
+    "id": "arcano_15_gato",
+    "name": {
+      "es": "El Diablo",
+      "en": "The Devil"
+    },
+    "description": {
+      "es": "El Diablo es una carta con poder simbólico en el tarot.",
+      "en": "The Devil is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_diablo_gato.png"
+  },
+  {
+    "id": "arcano_15_perro",
+    "name": {
+      "es": "El Diablo",
+      "en": "The Devil"
+    },
+    "description": {
+      "es": "El Diablo es una carta con poder simbólico en el tarot.",
+      "en": "The Devil is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/el_diablo_perro.png"
+  },
+  {
+    "id": "arcano_16_gato",
+    "name": {
+      "es": "La Torre",
+      "en": "The Tower"
+    },
+    "description": {
+      "es": "La Torre es una carta con poder simbólico en el tarot.",
+      "en": "The Tower is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 3,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/la_torre_gato.png"
+  },
+  {
+    "id": "arcano_16_perro",
+    "name": {
+      "es": "La Torre",
+      "en": "The Tower"
+    },
+    "description": {
+      "es": "La Torre es una carta con poder simbólico en el tarot.",
+      "en": "The Tower is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/la_torre_perro.png"
+  },
+  {
+    "id": "arcano_17_gato",
+    "name": {
+      "es": "La Estrella",
+      "en": "The Star"
+    },
+    "description": {
+      "es": "La Estrella es una carta con poder simbólico en el tarot.",
+      "en": "The Star is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 6,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/la_estrella_gato.png"
+  },
+  {
+    "id": "arcano_17_perro",
+    "name": {
+      "es": "La Estrella",
+      "en": "The Star"
+    },
+    "description": {
+      "es": "La Estrella es una carta con poder simbólico en el tarot.",
+      "en": "The Star is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 5,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/la_estrella_perro.png"
+  },
+  {
+    "id": "arcano_18_gato",
+    "name": {
+      "es": "La Luna",
+      "en": "The Moon"
+    },
+    "description": {
+      "es": "La Luna es una carta con poder simbólico en el tarot.",
+      "en": "The Moon is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/la_luna_gato.png"
+  },
+  {
+    "id": "arcano_18_perro",
+    "name": {
+      "es": "La Luna",
+      "en": "The Moon"
+    },
+    "description": {
+      "es": "La Luna es una carta con poder simbólico en el tarot.",
+      "en": "The Moon is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/la_luna_perro.png"
+  },
+  {
+    "id": "arcano_19_gato",
+    "name": {
+      "es": "El Sol",
+      "en": "The Sun"
+    },
+    "description": {
+      "es": "El Sol es una carta con poder simbólico en el tarot.",
+      "en": "The Sun is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 6,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_sol_gato.png"
+  },
+  {
+    "id": "arcano_19_perro",
+    "name": {
+      "es": "El Sol",
+      "en": "The Sun"
+    },
+    "description": {
+      "es": "El Sol es una carta con poder simbólico en el tarot.",
+      "en": "The Sun is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 2,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/el_sol_perro.png"
+  },
+  {
+    "id": "arcano_20_gato",
+    "name": {
+      "es": "El Juicio",
+      "en": "Judgement"
+    },
+    "description": {
+      "es": "El Juicio es una carta con poder simbólico en el tarot.",
+      "en": "Judgement is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_juicio_gato.png"
+  },
+  {
+    "id": "arcano_20_perro",
+    "name": {
+      "es": "El Juicio",
+      "en": "Judgement"
+    },
+    "description": {
+      "es": "El Juicio es una carta con poder simbólico en el tarot.",
+      "en": "Judgement is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 2,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/el_juicio_perro.png"
+  },
+  {
+    "id": "arcano_21_gato",
+    "name": {
+      "es": "El Mundo",
+      "en": "The World"
+    },
+    "description": {
+      "es": "El Mundo es una carta con poder simbólico en el tarot.",
+      "en": "The World is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 7,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/el_mundo_gato.png"
+  },
+  {
+    "id": "arcano_21_perro",
+    "name": {
+      "es": "El Mundo",
+      "en": "The World"
+    },
+    "description": {
+      "es": "El Mundo es una carta con poder simbólico en el tarot.",
+      "en": "The World is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "mayor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/el_mundo_perro.png"
+  },
+  {
+    "id": "copas_00_gato",
+    "name": {
+      "es": "As de Copas",
+      "en": "As of Cups"
+    },
+    "description": {
+      "es": "As de Copas es una carta con poder simbólico en el tarot.",
+      "en": "As of Cups is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 7,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/copas_00_gato.png"
+  },
+  {
+    "id": "copas_00_perro",
+    "name": {
+      "es": "As de Copas",
+      "en": "As of Cups"
+    },
+    "description": {
+      "es": "As de Copas es una carta con poder simbólico en el tarot.",
+      "en": "As of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 6,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_00_perro.png"
+  },
+  {
+    "id": "copas_01_gato",
+    "name": {
+      "es": "Dos de Copas",
+      "en": "Dos of Cups"
+    },
+    "description": {
+      "es": "Dos de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Dos of Cups is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 3,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/copas_01_gato.png"
+  },
+  {
+    "id": "copas_01_perro",
+    "name": {
+      "es": "Dos de Copas",
+      "en": "Dos of Cups"
+    },
+    "description": {
+      "es": "Dos de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Dos of Cups is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/copas_01_perro.png"
+  },
+  {
+    "id": "copas_02_gato",
+    "name": {
+      "es": "Tres de Copas",
+      "en": "Tres of Cups"
+    },
+    "description": {
+      "es": "Tres de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Tres of Cups is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 7,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/copas_02_gato.png"
+  },
+  {
+    "id": "copas_02_perro",
+    "name": {
+      "es": "Tres de Copas",
+      "en": "Tres of Cups"
+    },
+    "description": {
+      "es": "Tres de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Tres of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 2,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_02_perro.png"
+  },
+  {
+    "id": "copas_03_gato",
+    "name": {
+      "es": "Cuatro de Copas",
+      "en": "Cuatro of Cups"
+    },
+    "description": {
+      "es": "Cuatro de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Cuatro of Cups is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 6,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/copas_03_gato.png"
+  },
+  {
+    "id": "copas_03_perro",
+    "name": {
+      "es": "Cuatro de Copas",
+      "en": "Cuatro of Cups"
+    },
+    "description": {
+      "es": "Cuatro de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Cuatro of Cups is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 6,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/copas_03_perro.png"
+  },
+  {
+    "id": "copas_04_gato",
+    "name": {
+      "es": "Cinco de Copas",
+      "en": "Cinco of Cups"
+    },
+    "description": {
+      "es": "Cinco de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Cinco of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 6,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_04_gato.png"
+  },
+  {
+    "id": "copas_04_perro",
+    "name": {
+      "es": "Cinco de Copas",
+      "en": "Cinco of Cups"
+    },
+    "description": {
+      "es": "Cinco de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Cinco of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_04_perro.png"
+  },
+  {
+    "id": "copas_05_gato",
+    "name": {
+      "es": "Seis de Copas",
+      "en": "Seis of Cups"
+    },
+    "description": {
+      "es": "Seis de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Seis of Cups is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/copas_05_gato.png"
+  },
+  {
+    "id": "copas_05_perro",
+    "name": {
+      "es": "Seis de Copas",
+      "en": "Seis of Cups"
+    },
+    "description": {
+      "es": "Seis de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Seis of Cups is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 2,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/copas_05_perro.png"
+  },
+  {
+    "id": "copas_06_gato",
+    "name": {
+      "es": "Siete de Copas",
+      "en": "Siete of Cups"
+    },
+    "description": {
+      "es": "Siete de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Siete of Cups is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 3,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/copas_06_gato.png"
+  },
+  {
+    "id": "copas_06_perro",
+    "name": {
+      "es": "Siete de Copas",
+      "en": "Siete of Cups"
+    },
+    "description": {
+      "es": "Siete de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Siete of Cups is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 6,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/copas_06_perro.png"
+  },
+  {
+    "id": "copas_07_gato",
+    "name": {
+      "es": "Ocho de Copas",
+      "en": "Ocho of Cups"
+    },
+    "description": {
+      "es": "Ocho de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Ocho of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_07_gato.png"
+  },
+  {
+    "id": "copas_07_perro",
+    "name": {
+      "es": "Ocho de Copas",
+      "en": "Ocho of Cups"
+    },
+    "description": {
+      "es": "Ocho de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Ocho of Cups is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 4,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/copas_07_perro.png"
+  },
+  {
+    "id": "copas_08_gato",
+    "name": {
+      "es": "Nueve de Copas",
+      "en": "Nueve of Cups"
+    },
+    "description": {
+      "es": "Nueve de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Nueve of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_08_gato.png"
+  },
+  {
+    "id": "copas_08_perro",
+    "name": {
+      "es": "Nueve de Copas",
+      "en": "Nueve of Cups"
+    },
+    "description": {
+      "es": "Nueve de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Nueve of Cups is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/copas_08_perro.png"
+  },
+  {
+    "id": "copas_09_gato",
+    "name": {
+      "es": "Diez de Copas",
+      "en": "Diez of Cups"
+    },
+    "description": {
+      "es": "Diez de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Diez of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 7,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_09_gato.png"
+  },
+  {
+    "id": "copas_09_perro",
+    "name": {
+      "es": "Diez de Copas",
+      "en": "Diez of Cups"
+    },
+    "description": {
+      "es": "Diez de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Diez of Cups is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 3,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/copas_09_perro.png"
+  },
+  {
+    "id": "copas_10_gato",
+    "name": {
+      "es": "Sota de Copas",
+      "en": "Sota of Cups"
+    },
+    "description": {
+      "es": "Sota de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Sota of Cups is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 3,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/copas_10_gato.png"
+  },
+  {
+    "id": "copas_10_perro",
+    "name": {
+      "es": "Sota de Copas",
+      "en": "Sota of Cups"
+    },
+    "description": {
+      "es": "Sota de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Sota of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_10_perro.png"
+  },
+  {
+    "id": "copas_11_gato",
+    "name": {
+      "es": "Caballo de Copas",
+      "en": "Caballo of Cups"
+    },
+    "description": {
+      "es": "Caballo de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Caballo of Cups is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/copas_11_gato.png"
+  },
+  {
+    "id": "copas_11_perro",
+    "name": {
+      "es": "Caballo de Copas",
+      "en": "Caballo of Cups"
+    },
+    "description": {
+      "es": "Caballo de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Caballo of Cups is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 5,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/copas_11_perro.png"
+  },
+  {
+    "id": "copas_12_gato",
+    "name": {
+      "es": "Rey de Copas",
+      "en": "Rey of Cups"
+    },
+    "description": {
+      "es": "Rey de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Rey of Cups is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 3,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/copas_12_gato.png"
+  },
+  {
+    "id": "copas_12_perro",
+    "name": {
+      "es": "Rey de Copas",
+      "en": "Rey of Cups"
+    },
+    "description": {
+      "es": "Rey de Copas es una carta con poder simbólico en el tarot.",
+      "en": "Rey of Cups is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 6,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/copas_12_perro.png"
+  },
+  {
+    "id": "espadas_00_gato",
+    "name": {
+      "es": "As de Espadas",
+      "en": "As of Swords"
+    },
+    "description": {
+      "es": "As de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "As of Swords is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 7,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/espadas_00_gato.png"
+  },
+  {
+    "id": "espadas_00_perro",
+    "name": {
+      "es": "As de Espadas",
+      "en": "As of Swords"
+    },
+    "description": {
+      "es": "As de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "As of Swords is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/espadas_00_perro.png"
+  },
+  {
+    "id": "espadas_01_gato",
+    "name": {
+      "es": "Dos de Espadas",
+      "en": "Dos of Swords"
+    },
+    "description": {
+      "es": "Dos de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Dos of Swords is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/espadas_01_gato.png"
+  },
+  {
+    "id": "espadas_01_perro",
+    "name": {
+      "es": "Dos de Espadas",
+      "en": "Dos of Swords"
+    },
+    "description": {
+      "es": "Dos de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Dos of Swords is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/espadas_01_perro.png"
+  },
+  {
+    "id": "espadas_02_gato",
+    "name": {
+      "es": "Tres de Espadas",
+      "en": "Tres of Swords"
+    },
+    "description": {
+      "es": "Tres de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Tres of Swords is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/espadas_02_gato.png"
+  },
+  {
+    "id": "espadas_02_perro",
+    "name": {
+      "es": "Tres de Espadas",
+      "en": "Tres of Swords"
+    },
+    "description": {
+      "es": "Tres de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Tres of Swords is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 6,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/espadas_02_perro.png"
+  },
+  {
+    "id": "espadas_03_gato",
+    "name": {
+      "es": "Cuatro de Espadas",
+      "en": "Cuatro of Swords"
+    },
+    "description": {
+      "es": "Cuatro de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Cuatro of Swords is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 6,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/espadas_03_gato.png"
+  },
+  {
+    "id": "espadas_03_perro",
+    "name": {
+      "es": "Cuatro de Espadas",
+      "en": "Cuatro of Swords"
+    },
+    "description": {
+      "es": "Cuatro de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Cuatro of Swords is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 3,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/espadas_03_perro.png"
+  },
+  {
+    "id": "espadas_04_gato",
+    "name": {
+      "es": "Cinco de Espadas",
+      "en": "Cinco of Swords"
+    },
+    "description": {
+      "es": "Cinco de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Cinco of Swords is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/espadas_04_gato.png"
+  },
+  {
+    "id": "espadas_04_perro",
+    "name": {
+      "es": "Cinco de Espadas",
+      "en": "Cinco of Swords"
+    },
+    "description": {
+      "es": "Cinco de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Cinco of Swords is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 6,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/espadas_04_perro.png"
+  },
+  {
+    "id": "espadas_05_gato",
+    "name": {
+      "es": "Seis de Espadas",
+      "en": "Seis of Swords"
+    },
+    "description": {
+      "es": "Seis de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Seis of Swords is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 7,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/espadas_05_gato.png"
+  },
+  {
+    "id": "espadas_05_perro",
+    "name": {
+      "es": "Seis de Espadas",
+      "en": "Seis of Swords"
+    },
+    "description": {
+      "es": "Seis de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Seis of Swords is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/espadas_05_perro.png"
+  },
+  {
+    "id": "espadas_06_gato",
+    "name": {
+      "es": "Siete de Espadas",
+      "en": "Siete of Swords"
+    },
+    "description": {
+      "es": "Siete de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Siete of Swords is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/espadas_06_gato.png"
+  },
+  {
+    "id": "espadas_06_perro",
+    "name": {
+      "es": "Siete de Espadas",
+      "en": "Siete of Swords"
+    },
+    "description": {
+      "es": "Siete de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Siete of Swords is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/espadas_06_perro.png"
+  },
+  {
+    "id": "espadas_07_gato",
+    "name": {
+      "es": "Ocho de Espadas",
+      "en": "Ocho of Swords"
+    },
+    "description": {
+      "es": "Ocho de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Ocho of Swords is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 3,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/espadas_07_gato.png"
+  },
+  {
+    "id": "espadas_07_perro",
+    "name": {
+      "es": "Ocho de Espadas",
+      "en": "Ocho of Swords"
+    },
+    "description": {
+      "es": "Ocho de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Ocho of Swords is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/espadas_07_perro.png"
+  },
+  {
+    "id": "espadas_08_gato",
+    "name": {
+      "es": "Nueve de Espadas",
+      "en": "Nueve of Swords"
+    },
+    "description": {
+      "es": "Nueve de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Nueve of Swords is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 6,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/espadas_08_gato.png"
+  },
+  {
+    "id": "espadas_08_perro",
+    "name": {
+      "es": "Nueve de Espadas",
+      "en": "Nueve of Swords"
+    },
+    "description": {
+      "es": "Nueve de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Nueve of Swords is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 5,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/espadas_08_perro.png"
+  },
+  {
+    "id": "espadas_09_gato",
+    "name": {
+      "es": "Diez de Espadas",
+      "en": "Diez of Swords"
+    },
+    "description": {
+      "es": "Diez de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Diez of Swords is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 3,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/espadas_09_gato.png"
+  },
+  {
+    "id": "espadas_09_perro",
+    "name": {
+      "es": "Diez de Espadas",
+      "en": "Diez of Swords"
+    },
+    "description": {
+      "es": "Diez de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Diez of Swords is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 5,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/espadas_09_perro.png"
+  },
+  {
+    "id": "espadas_10_gato",
+    "name": {
+      "es": "Sota de Espadas",
+      "en": "Sota of Swords"
+    },
+    "description": {
+      "es": "Sota de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Sota of Swords is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/espadas_10_gato.png"
+  },
+  {
+    "id": "espadas_10_perro",
+    "name": {
+      "es": "Sota de Espadas",
+      "en": "Sota of Swords"
+    },
+    "description": {
+      "es": "Sota de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Sota of Swords is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/espadas_10_perro.png"
+  },
+  {
+    "id": "espadas_11_gato",
+    "name": {
+      "es": "Caballo de Espadas",
+      "en": "Caballo of Swords"
+    },
+    "description": {
+      "es": "Caballo de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Caballo of Swords is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 6,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/espadas_11_gato.png"
+  },
+  {
+    "id": "espadas_11_perro",
+    "name": {
+      "es": "Caballo de Espadas",
+      "en": "Caballo of Swords"
+    },
+    "description": {
+      "es": "Caballo de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Caballo of Swords is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 5,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/espadas_11_perro.png"
+  },
+  {
+    "id": "espadas_12_gato",
+    "name": {
+      "es": "Rey de Espadas",
+      "en": "Rey of Swords"
+    },
+    "description": {
+      "es": "Rey de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Rey of Swords is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 6,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/espadas_12_gato.png"
+  },
+  {
+    "id": "espadas_12_perro",
+    "name": {
+      "es": "Rey de Espadas",
+      "en": "Rey of Swords"
+    },
+    "description": {
+      "es": "Rey de Espadas es una carta con poder simbólico en el tarot.",
+      "en": "Rey of Swords is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/espadas_12_perro.png"
+  },
+  {
+    "id": "oros_00_gato",
+    "name": {
+      "es": "As de Oros",
+      "en": "As of Pentacles"
+    },
+    "description": {
+      "es": "As de Oros es una carta con poder simbólico en el tarot.",
+      "en": "As of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/oros_00_gato.png"
+  },
+  {
+    "id": "oros_00_perro",
+    "name": {
+      "es": "As de Oros",
+      "en": "As of Pentacles"
+    },
+    "description": {
+      "es": "As de Oros es una carta con poder simbólico en el tarot.",
+      "en": "As of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/oros_00_perro.png"
+  },
+  {
+    "id": "oros_01_gato",
+    "name": {
+      "es": "Dos de Oros",
+      "en": "Dos of Pentacles"
+    },
+    "description": {
+      "es": "Dos de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Dos of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 3,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/oros_01_gato.png"
+  },
+  {
+    "id": "oros_01_perro",
+    "name": {
+      "es": "Dos de Oros",
+      "en": "Dos of Pentacles"
+    },
+    "description": {
+      "es": "Dos de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Dos of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 2,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/oros_01_perro.png"
+  },
+  {
+    "id": "oros_02_gato",
+    "name": {
+      "es": "Tres de Oros",
+      "en": "Tres of Pentacles"
+    },
+    "description": {
+      "es": "Tres de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Tres of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 6,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/oros_02_gato.png"
+  },
+  {
+    "id": "oros_02_perro",
+    "name": {
+      "es": "Tres de Oros",
+      "en": "Tres of Pentacles"
+    },
+    "description": {
+      "es": "Tres de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Tres of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 3,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/oros_02_perro.png"
+  },
+  {
+    "id": "oros_03_gato",
+    "name": {
+      "es": "Cuatro de Oros",
+      "en": "Cuatro of Pentacles"
+    },
+    "description": {
+      "es": "Cuatro de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Cuatro of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/oros_03_gato.png"
+  },
+  {
+    "id": "oros_03_perro",
+    "name": {
+      "es": "Cuatro de Oros",
+      "en": "Cuatro of Pentacles"
+    },
+    "description": {
+      "es": "Cuatro de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Cuatro of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 3,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/oros_03_perro.png"
+  },
+  {
+    "id": "oros_04_gato",
+    "name": {
+      "es": "Cinco de Oros",
+      "en": "Cinco of Pentacles"
+    },
+    "description": {
+      "es": "Cinco de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Cinco of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 7,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/oros_04_gato.png"
+  },
+  {
+    "id": "oros_04_perro",
+    "name": {
+      "es": "Cinco de Oros",
+      "en": "Cinco of Pentacles"
+    },
+    "description": {
+      "es": "Cinco de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Cinco of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/oros_04_perro.png"
+  },
+  {
+    "id": "oros_05_gato",
+    "name": {
+      "es": "Seis de Oros",
+      "en": "Seis of Pentacles"
+    },
+    "description": {
+      "es": "Seis de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Seis of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/oros_05_gato.png"
+  },
+  {
+    "id": "oros_05_perro",
+    "name": {
+      "es": "Seis de Oros",
+      "en": "Seis of Pentacles"
+    },
+    "description": {
+      "es": "Seis de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Seis of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/oros_05_perro.png"
+  },
+  {
+    "id": "oros_06_gato",
+    "name": {
+      "es": "Siete de Oros",
+      "en": "Siete of Pentacles"
+    },
+    "description": {
+      "es": "Siete de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Siete of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 7,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/oros_06_gato.png"
+  },
+  {
+    "id": "oros_06_perro",
+    "name": {
+      "es": "Siete de Oros",
+      "en": "Siete of Pentacles"
+    },
+    "description": {
+      "es": "Siete de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Siete of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/oros_06_perro.png"
+  },
+  {
+    "id": "oros_07_gato",
+    "name": {
+      "es": "Ocho de Oros",
+      "en": "Ocho of Pentacles"
+    },
+    "description": {
+      "es": "Ocho de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Ocho of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 3,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/oros_07_gato.png"
+  },
+  {
+    "id": "oros_07_perro",
+    "name": {
+      "es": "Ocho de Oros",
+      "en": "Ocho of Pentacles"
+    },
+    "description": {
+      "es": "Ocho de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Ocho of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 4,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/oros_07_perro.png"
+  },
+  {
+    "id": "oros_08_gato",
+    "name": {
+      "es": "Nueve de Oros",
+      "en": "Nueve of Pentacles"
+    },
+    "description": {
+      "es": "Nueve de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Nueve of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/oros_08_gato.png"
+  },
+  {
+    "id": "oros_08_perro",
+    "name": {
+      "es": "Nueve de Oros",
+      "en": "Nueve of Pentacles"
+    },
+    "description": {
+      "es": "Nueve de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Nueve of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 2,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/oros_08_perro.png"
+  },
+  {
+    "id": "oros_09_gato",
+    "name": {
+      "es": "Diez de Oros",
+      "en": "Diez of Pentacles"
+    },
+    "description": {
+      "es": "Diez de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Diez of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 3,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/oros_09_gato.png"
+  },
+  {
+    "id": "oros_09_perro",
+    "name": {
+      "es": "Diez de Oros",
+      "en": "Diez of Pentacles"
+    },
+    "description": {
+      "es": "Diez de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Diez of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/oros_09_perro.png"
+  },
+  {
+    "id": "oros_10_gato",
+    "name": {
+      "es": "Sota de Oros",
+      "en": "Sota of Pentacles"
+    },
+    "description": {
+      "es": "Sota de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Sota of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 4,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/oros_10_gato.png"
+  },
+  {
+    "id": "oros_10_perro",
+    "name": {
+      "es": "Sota de Oros",
+      "en": "Sota of Pentacles"
+    },
+    "description": {
+      "es": "Sota de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Sota of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 6,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/oros_10_perro.png"
+  },
+  {
+    "id": "oros_11_gato",
+    "name": {
+      "es": "Caballo de Oros",
+      "en": "Caballo of Pentacles"
+    },
+    "description": {
+      "es": "Caballo de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Caballo of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 4,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/oros_11_gato.png"
+  },
+  {
+    "id": "oros_11_perro",
+    "name": {
+      "es": "Caballo de Oros",
+      "en": "Caballo of Pentacles"
+    },
+    "description": {
+      "es": "Caballo de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Caballo of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/oros_11_perro.png"
+  },
+  {
+    "id": "oros_12_gato",
+    "name": {
+      "es": "Rey de Oros",
+      "en": "Rey of Pentacles"
+    },
+    "description": {
+      "es": "Rey de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Rey of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 6,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/oros_12_gato.png"
+  },
+  {
+    "id": "oros_12_perro",
+    "name": {
+      "es": "Rey de Oros",
+      "en": "Rey of Pentacles"
+    },
+    "description": {
+      "es": "Rey de Oros es una carta con poder simbólico en el tarot.",
+      "en": "Rey of Pentacles is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 6,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/oros_12_perro.png"
+  },
+  {
+    "id": "bastos_00_gato",
+    "name": {
+      "es": "As de Bastos",
+      "en": "As of Wands"
+    },
+    "description": {
+      "es": "As de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "As of Wands is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/bastos_00_gato.png"
+  },
+  {
+    "id": "bastos_00_perro",
+    "name": {
+      "es": "As de Bastos",
+      "en": "As of Wands"
+    },
+    "description": {
+      "es": "As de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "As of Wands is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 2,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/bastos_00_perro.png"
+  },
+  {
+    "id": "bastos_01_gato",
+    "name": {
+      "es": "Dos de Bastos",
+      "en": "Dos of Wands"
+    },
+    "description": {
+      "es": "Dos de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Dos of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_01_gato.png"
+  },
+  {
+    "id": "bastos_01_perro",
+    "name": {
+      "es": "Dos de Bastos",
+      "en": "Dos of Wands"
+    },
+    "description": {
+      "es": "Dos de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Dos of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_01_perro.png"
+  },
+  {
+    "id": "bastos_02_gato",
+    "name": {
+      "es": "Tres de Bastos",
+      "en": "Tres of Wands"
+    },
+    "description": {
+      "es": "Tres de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Tres of Wands is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/bastos_02_gato.png"
+  },
+  {
+    "id": "bastos_02_perro",
+    "name": {
+      "es": "Tres de Bastos",
+      "en": "Tres of Wands"
+    },
+    "description": {
+      "es": "Tres de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Tres of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 2,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_02_perro.png"
+  },
+  {
+    "id": "bastos_03_gato",
+    "name": {
+      "es": "Cuatro de Bastos",
+      "en": "Cuatro of Wands"
+    },
+    "description": {
+      "es": "Cuatro de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Cuatro of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 5,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_03_gato.png"
+  },
+  {
+    "id": "bastos_03_perro",
+    "name": {
+      "es": "Cuatro de Bastos",
+      "en": "Cuatro of Wands"
+    },
+    "description": {
+      "es": "Cuatro de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Cuatro of Wands is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 4,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/bastos_03_perro.png"
+  },
+  {
+    "id": "bastos_04_gato",
+    "name": {
+      "es": "Cinco de Bastos",
+      "en": "Cinco of Wands"
+    },
+    "description": {
+      "es": "Cinco de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Cinco of Wands is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 5,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/bastos_04_gato.png"
+  },
+  {
+    "id": "bastos_04_perro",
+    "name": {
+      "es": "Cinco de Bastos",
+      "en": "Cinco of Wands"
+    },
+    "description": {
+      "es": "Cinco de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Cinco of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_04_perro.png"
+  },
+  {
+    "id": "bastos_05_gato",
+    "name": {
+      "es": "Seis de Bastos",
+      "en": "Seis of Wands"
+    },
+    "description": {
+      "es": "Seis de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Seis of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 6,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_05_gato.png"
+  },
+  {
+    "id": "bastos_05_perro",
+    "name": {
+      "es": "Seis de Bastos",
+      "en": "Seis of Wands"
+    },
+    "description": {
+      "es": "Seis de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Seis of Wands is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/bastos_05_perro.png"
+  },
+  {
+    "id": "bastos_06_gato",
+    "name": {
+      "es": "Siete de Bastos",
+      "en": "Siete of Wands"
+    },
+    "description": {
+      "es": "Siete de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Siete of Wands is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 6,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/bastos_06_gato.png"
+  },
+  {
+    "id": "bastos_06_perro",
+    "name": {
+      "es": "Siete de Bastos",
+      "en": "Siete of Wands"
+    },
+    "description": {
+      "es": "Siete de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Siete of Wands is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 5,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/bastos_06_perro.png"
+  },
+  {
+    "id": "bastos_07_gato",
+    "name": {
+      "es": "Ocho de Bastos",
+      "en": "Ocho of Wands"
+    },
+    "description": {
+      "es": "Ocho de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Ocho of Wands is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 5,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/bastos_07_gato.png"
+  },
+  {
+    "id": "bastos_07_perro",
+    "name": {
+      "es": "Ocho de Bastos",
+      "en": "Ocho of Wands"
+    },
+    "description": {
+      "es": "Ocho de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Ocho of Wands is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/bastos_07_perro.png"
+  },
+  {
+    "id": "bastos_08_gato",
+    "name": {
+      "es": "Nueve de Bastos",
+      "en": "Nueve of Wands"
+    },
+    "description": {
+      "es": "Nueve de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Nueve of Wands is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 6,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/bastos_08_gato.png"
+  },
+  {
+    "id": "bastos_08_perro",
+    "name": {
+      "es": "Nueve de Bastos",
+      "en": "Nueve of Wands"
+    },
+    "description": {
+      "es": "Nueve de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Nueve of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 4,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_08_perro.png"
+  },
+  {
+    "id": "bastos_09_gato",
+    "name": {
+      "es": "Diez de Bastos",
+      "en": "Diez of Wands"
+    },
+    "description": {
+      "es": "Diez de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Diez of Wands is a tarot card with symbolic power."
+    },
+    "type": "agua",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 4,
+    "effect": {
+      "id": "curacion",
+      "description": {
+        "es": "Restaura 1 punto de vida cada turno.",
+        "en": "Restores 1 HP each turn."
+      }
+    },
+    "image": "assets/cartas/bastos_09_gato.png"
+  },
+  {
+    "id": "bastos_09_perro",
+    "name": {
+      "es": "Diez de Bastos",
+      "en": "Diez of Wands"
+    },
+    "description": {
+      "es": "Diez de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Diez of Wands is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 5,
+    "defense": 5,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/bastos_09_perro.png"
+  },
+  {
+    "id": "bastos_10_gato",
+    "name": {
+      "es": "Sota de Bastos",
+      "en": "Sota of Wands"
+    },
+    "description": {
+      "es": "Sota de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Sota of Wands is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 7,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/bastos_10_gato.png"
+  },
+  {
+    "id": "bastos_10_perro",
+    "name": {
+      "es": "Sota de Bastos",
+      "en": "Sota of Wands"
+    },
+    "description": {
+      "es": "Sota de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Sota of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 3,
+    "defense": 2,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_10_perro.png"
+  },
+  {
+    "id": "bastos_11_gato",
+    "name": {
+      "es": "Caballo de Bastos",
+      "en": "Caballo of Wands"
+    },
+    "description": {
+      "es": "Caballo de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Caballo of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 6,
+    "defense": 6,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_11_gato.png"
+  },
+  {
+    "id": "bastos_11_perro",
+    "name": {
+      "es": "Caballo de Bastos",
+      "en": "Caballo of Wands"
+    },
+    "description": {
+      "es": "Caballo de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Caballo of Wands is a tarot card with symbolic power."
+    },
+    "type": "tierra",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 3,
+    "effect": {
+      "id": "escudo",
+      "description": {
+        "es": "Recibe menos daño en defensa.",
+        "en": "Takes less damage when defending."
+      }
+    },
+    "image": "assets/cartas/bastos_11_perro.png"
+  },
+  {
+    "id": "bastos_12_gato",
+    "name": {
+      "es": "Rey de Bastos",
+      "en": "Rey of Wands"
+    },
+    "description": {
+      "es": "Rey de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Rey of Wands is a tarot card with symbolic power."
+    },
+    "type": "fuego",
+    "species": "gato",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 2,
+    "defense": 4,
+    "effect": {
+      "id": "quemadura",
+      "description": {
+        "es": "Inflige daño adicional al atacar.",
+        "en": "Deals extra damage when attacking."
+      }
+    },
+    "image": "assets/cartas/bastos_12_gato.png"
+  },
+  {
+    "id": "bastos_12_perro",
+    "name": {
+      "es": "Rey de Bastos",
+      "en": "Rey of Wands"
+    },
+    "description": {
+      "es": "Rey de Bastos es una carta con poder simbólico en el tarot.",
+      "en": "Rey of Wands is a tarot card with symbolic power."
+    },
+    "type": "aire",
+    "species": "perro",
+    "arcana": "menor",
+    "series": "Tarot Arcano - Base Set",
+    "attack": 7,
+    "defense": 2,
+    "effect": {
+      "id": "evasion",
+      "description": {
+        "es": "Tiene chance de esquivar ataques.",
+        "en": "Has a chance to evade attacks."
+      }
+    },
+    "image": "assets/cartas/bastos_12_perro.png"
+  }
+]
